@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plat_duino Plat_pi Plat_bbg Plat_linkit    on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/plat_duino-plat_pi-plat_bbg-plat_linkit---/</link>
+    <description>Recent content in Plat_duino Plat_pi Plat_bbg Plat_linkit    on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/plat_duino-plat_pi-plat_bbg-plat_linkit---/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - 6-Axis Accelerometer&amp;Gyroscope</title>
+      <link>http://wiki.seeed.cc/grove-6-axis_accelerometerandgyroscope/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-6-axis_accelerometerandgyroscope/</guid>
+      <description>Grove - 6-Axis Accelerometer&amp;amp;Gyroscope is a cost-effective Grove interfaced and integrated sensor combination of 3-axis digital accelerometer and 3-axis digital gyroscope.
+With a serious low power consumption digital chip LSM6DS3(datasheet) and power supply regulator inside, it features high sensitivity, green tech and low noise interference. It can be configured to different sensitivity levels of acceleration and different angular rate measurement range. Provided with detailed SDK, it can make the prototyping process quicker and easier.</description>
+    </item>
+    
+  </channel>
+</rss>

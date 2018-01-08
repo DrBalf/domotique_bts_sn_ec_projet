@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plat_duino on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/plat_duino/</link>
+    <description>Recent content in Plat_duino on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/plat_duino/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bees Shield</title>
+      <link>http://wiki.seeed.cc/bees_shield/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/bees_shield/</guid>
+      <description>Bees_Shield will make interfacing multiple Bee-style (XBee, GPRS Bee, Bluetooth Bee and etc) easier than ever before. Aside from two Bee-style 20p 2.0 pitch sockets, it also has a large prototyping area, and a customizable software serial port for easier prototyping.
+
+Versions    Revision Descriptions Release     v2.12 Initial public release June 08, 2010    Features  Dual Bee type socket 3 indicator LED(ON/Sleep, RSSI, ASSOC) for each Xbee Full size with free drills Reset button for each Xbee Reset button for base board Provide maximal 500mA under 3.</description>
+    </item>
+    
+    <item>
+      <title>Grove - Dust Sensor</title>
+      <link>http://wiki.seeed.cc/grove-dust_sensor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-dust_sensor/</guid>
+      <description>This Dust Sensor gives a good indication of the air quality in an environment by measuring the dust concentration. The Particulate Matter level (PM level) in the air is measured by counting the Low Pulse Occupancy time (LPO time) in given time unit. LPO time is proportional to PM concentration. This sensor can provide reliable data for air purifier systems; it is responsive to PM of diameter 1μm.
+!!!note - This sensor uses counting method to measure dust concentration, not weighing method, and the unit is pcs/L or pcs/0.</description>
+    </item>
+    
+  </channel>
+</rss>

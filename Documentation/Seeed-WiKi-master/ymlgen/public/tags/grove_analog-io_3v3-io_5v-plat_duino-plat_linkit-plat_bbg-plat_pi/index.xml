@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grove_analog Io_3v3 Io_5v Plat_duino Plat_linkit Plat_bbg Plat_pi on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/grove_analog-io_3v3-io_5v-plat_duino-plat_linkit-plat_bbg-plat_pi/</link>
+    <description>Recent content in Grove_analog Io_3v3 Io_5v Plat_duino Plat_linkit Plat_bbg Plat_pi on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/grove_analog-io_3v3-io_5v-plat_duino-plat_linkit-plat_bbg-plat_pi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - Loudness Sensor</title>
+      <link>http://wiki.seeed.cc/grove-loudness_sensor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-loudness_sensor/</guid>
+      <description>The Grove - Loudness Sensor is designed to detect the sound of environment. Based on LM2904 amplifier and a built-in microphone, it amplifies and filters the high frequency signal that received from the microphone, and outputs a positive envelop. This is used for Arduino’s signal acquisition. The output value depends on the level of sound input. In order to avoid unnecessary signal disturbances, input signal will go through two times’ filtering inside the module.</description>
+    </item>
+    
+  </channel>
+</rss>

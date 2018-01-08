@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grove_digital Io_3v3 Io_5v Plat_duino Plat_linkit Plat_wio on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/grove_digital-io_3v3-io_5v-plat_duino-plat_linkit-plat_wio/</link>
+    <description>Recent content in Grove_digital Io_3v3 Io_5v Plat_duino Plat_linkit Plat_wio on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/grove_digital-io_3v3-io_5v-plat_duino-plat_linkit-plat_wio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - Infrared Reflective Sensor</title>
+      <link>http://wiki.seeed.cc/grove-infrared_reflective_sensor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-infrared_reflective_sensor/</guid>
+      <description>Grove - Infrared Reflective Sensor is used to detect the presence of an object within a specific range. The sensor consists of an IR LED and a photosensor (phototransistor) pair. The light emitted by the IR LED gets reflected by any object placed in front of the sensor and this reflection is detected by the photosensor(phototransistor). Any white (or lighter) colored surface reflects more than black (or darker) colored surface.</description>
+    </item>
+    
+    <item>
+      <title>Grove - LED Bar</title>
+      <link>http://wiki.seeed.cc/grove-led_bar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-led_bar/</guid>
+      <description>Grove – LED Bar is comprised of a 10 segment LED gauge bar and an MY9221 LED controlling chip. It can be used as an indicator for remaining battery life, voltage, water level, music volume or other values that require a gradient display. There are 10 LED bars in the LED bar graph: one red, one yellow, one light green, and seven green bars.</description>
+    </item>
+    
+  </channel>
+</rss>

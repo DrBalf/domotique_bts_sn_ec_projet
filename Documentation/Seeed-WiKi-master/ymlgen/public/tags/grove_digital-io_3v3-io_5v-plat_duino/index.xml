@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grove_digital Io_3v3 Io_5v Plat_duino on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/grove_digital-io_3v3-io_5v-plat_duino/</link>
+    <description>Recent content in Grove_digital Io_3v3 Io_5v Plat_duino on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/grove_digital-io_3v3-io_5v-plat_duino/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - Infrared Receiver</title>
+      <link>http://wiki.seeed.cc/grove-infrared_receiver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-infrared_receiver/</guid>
+      <description>The Infrared Receiver is used to receive infrared signals and also used for remote control detection. There is an IR detector on the Infrared Receiver which is used to get the infrared light emitted by the Infrared Emitter. The IR detector have a demodulator inside that looks for modulated IR at 38 KHz. The Infrared Receiver can receive signals well within 10 meters. If more than 10 meters , the receiver may not get the signals.</description>
+    </item>
+    
+    <item>
+      <title>Grove - Recorder v2.0</title>
+      <link>http://wiki.seeed.cc/grove-recorder_v2.0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-recorder_v2.0/</guid>
+      <description>Grove - CRecorder v2.0 is a upgraded recorder with enriched features. It can record 8-20 seconds[1] audio with high-quality and natural voice. In addition, it also gets sound volume control and playback functions. With MCU such as Seeeduino or Arduino board, you can prototype various applications quickly with user-friendly interfaces.
+[1] Recording time could be customized(if you require) by replacing different resistor the solution to do this will be described in later sections.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grove_digital Io_3v3 Io_5v Plat_duino Plat_pi Plat_bbg on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/grove_digital-io_3v3-io_5v-plat_duino-plat_pi-plat_bbg/</link>
+    <description>Recent content in Grove_digital Io_3v3 Io_5v Plat_duino Plat_pi Plat_bbg on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/grove_digital-io_3v3-io_5v-plat_duino-plat_pi-plat_bbg/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - Ear-clip Heart Rate Sensor</title>
+      <link>http://wiki.seeed.cc/grove-ear-clip_heart_rate_sensor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-ear-clip_heart_rate_sensor/</guid>
+      <description>The Heart Rate Ear clip kit contains a ear clip and a receiver module. The heart rate measure kit can be used to monitor heart rate of patient and athlete. The result can be displayed on a screen via the serial port and can be saved for analysis. The entire system is a high sensitivity, low power consumption and portable.
+
+Features  Low power consumption Convenient to use High sensitivity Fully RoHS compliant  !</description>
+    </item>
+    
+    <item>
+      <title>Grove - Tilt Switch</title>
+      <link>http://wiki.seeed.cc/grove-tilt_switch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-tilt_switch/</guid>
+      <description>The Grove-Tilt Switch is the equivalent of a button, and is used as a digital input. Inside the tilt switch is a pair of balls that make contact with the pins when the case is upright. Tilt the case over and the balls don&amp;rsquo;t touch, thus not making a connection. It is wired to the SIG line, NC is not used on this Grove.
+
+Features  Grove Interface Easy to use Simple Grove module  !</description>
+    </item>
+    
+    <item>
+      <title>Grove - Variable Color LED</title>
+      <link>http://wiki.seeed.cc/grove-variable_color_led/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-variable_color_led/</guid>
+      <description>This Grove consists of one 8mm RGB LED. It operates at 5V DC. When SIG pin is logic HIGH, the RGB LED will light up. Perfect for use on Seeeduino digital outputs, or also can be controlled by pulse-width modulation. And it uses three adjustable resistor to change the color of the RGB LED.
+
+Features  Grove compatible Color adjustable  !!!Tip More details about Grove modules please refer to Grove System</description>
+    </item>
+    
+  </channel>
+</rss>

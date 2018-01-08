@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grove_i2c Io_3v3 Io_5v Plat_duino Plat_bbg on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/grove_i2c-io_3v3-io_5v-plat_duino-plat_bbg/</link>
+    <description>Recent content in Grove_i2c Io_3v3 Io_5v Plat_duino Plat_bbg on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/grove_i2c-io_3v3-io_5v-plat_duino-plat_bbg/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - 6-Axis Accelerometer&amp;Compass V2.0</title>
+      <link>http://wiki.seeed.cc/grove-6-axis_accelerometerandcompass_v2.0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-6-axis_accelerometerandcompass_v2.0/</guid>
+      <description>The Grove –6-Axis Accelerometer&amp;amp;Compass V2.0 is a 3-axis accelerometer combined with a 3-axis magnetic sensor. It is an upgraded version of Grove - 6-Axis Accelerometer&amp;amp;Compass V1.0 and based on the sensor module LSM303D which has a selectable linear acceleration full scale range of ±2g / ±4g / ±8g / ±16g and a selectable magnetic field full scale range of ±2 /±4 / ±8 / ±12 gauss. Both the magnetic parts and the accelerometer parts can be powered down separately to reduce the power consumption.</description>
+    </item>
+    
+  </channel>
+</rss>

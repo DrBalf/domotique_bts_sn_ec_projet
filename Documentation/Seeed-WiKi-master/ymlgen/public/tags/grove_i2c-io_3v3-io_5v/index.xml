@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grove_i2c Io_3v3 Io_5v on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/grove_i2c-io_3v3-io_5v/</link>
+    <description>Recent content in Grove_i2c Io_3v3 Io_5v on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/grove_i2c-io_3v3-io_5v/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - I2C Hub</title>
+      <link>http://wiki.seeed.cc/grove-i2c_hub/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-i2c_hub/</guid>
+      <description>I2C Hub Grove is an extension Grove module for connecting multiply I2C devices to Grove Base Shield. It can use with Universal 4 Pin to X2 4 Pin cable and connects up to 3 I2C devices which may cover most developing purpose.
+
+Features  Chainable  Platforms Supported Application Ideas  Using more I2C devices than you otherwise have room for on your Grove platform.  Usage It does not conflict if you use the same I2C Socket simultaneously because every I2C device has its own address.</description>
+    </item>
+    
+  </channel>
+</rss>

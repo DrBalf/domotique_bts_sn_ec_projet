@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grove_analog Io_3v3 Io_5v Plat_duino on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/grove_analog-io_3v3-io_5v-plat_duino/</link>
+    <description>Recent content in Grove_analog Io_3v3 Io_5v Plat_duino on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/grove_analog-io_3v3-io_5v-plat_duino/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - Infrared Temperature Sensor</title>
+      <link>http://wiki.seeed.cc/grove-infrared_temperature_sensor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-infrared_temperature_sensor/</guid>
+      <description>The Infrared temperature sensor is a non-contact temperature measure model. It is composed of 116 elements of thermocouple in series on a floating micro-membrane, the black Surface of the sensor is good to absorb the incident thermal infrared radiation, which might trigger a voltage response at output. This sensor outputs an analog voltage (0~1.1V) according to target temperature.
+Old version: v0.92.
+
+Specifications  Voltage: 3-5V Measuring Current Supply: 160-200 uA Measuring Range: -10~100°C Holding Time: 2S Operating Temperature: -10~80 °C Storage Temperature: -35-80 °C  !</description>
+    </item>
+    
+  </channel>
+</rss>

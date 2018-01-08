@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grove_digital Io_5v Plat_duino Plat_wio on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/grove_digital-io_5v-plat_duino-plat_wio/</link>
+    <description>Recent content in Grove_digital Io_5v Plat_duino Plat_wio on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/grove_digital-io_5v-plat_duino-plat_wio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - Electromagnet</title>
+      <link>http://wiki.seeed.cc/grove-electromagnet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-electromagnet/</guid>
+      <description>An electromagnet is a type of magnet in which the magnetic field is produced by electric current. An electric current flowing in a wire creates a magnetic field around the wire, due to Ampere&amp;rsquo;s law(see drawing below). To concentrate the magnetic field, in an electromagnet the wire is wound into a coil with many turns of wire lying side by side. The magnetic field of all the turns of wire passes through the center of the coil, creating a strong magnetic field there.</description>
+    </item>
+    
+    <item>
+      <title>Grove - Speaker</title>
+      <link>http://wiki.seeed.cc/grove-speaker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-speaker/</guid>
+      <description>The Grove- Speaker is a module which consists of power amplification and voice outputs. The loudness can be adjusted by the on-board potentiometer. With different input frequencies, the loud-speaker generates different tones. Coding the music into arduino, DIY your own music box!
+
+Features  Volume Adjustable Grove Interface  !!!Tip More details about Grove modules please refer to Grove System
+Specifications    Item Min Typical Max Unit     Working Voltage 4.</description>
+    </item>
+    
+  </channel>
+</rss>

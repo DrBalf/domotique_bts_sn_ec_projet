@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Io_3v3 Io_5v Plat_duino Plat_pi on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/io_3v3-io_5v-plat_duino-plat_pi/</link>
+    <description>Recent content in Io_3v3 Io_5v Plat_duino Plat_pi on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/io_3v3-io_5v-plat_duino-plat_pi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - PIR Motion Sensor</title>
+      <link>http://wiki.seeed.cc/grove-pir_motion_sensor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-pir_motion_sensor/</guid>
+      <description>This sensor allows you to sense motion, usually human movement in its range. Simply connect it to Grove - Base shield and program it, when anyone moves in its detecting range, the sensor will output HIGH on its SIG pin.
+
+Features  Grove compatible interface Adjustable detecting distance Adjustable holding time  !!!Tip More details about Grove modules please refer to Grove System
+Specification    Parameter Value/Range     Operating Voltage 3V–5V   Operating Current(VCC = 3V) 100uA   Operating Current(VCC = 5V) 150uA   Measuring Range 0.</description>
+    </item>
+    
+    <item>
+      <title>Grove - Temperature and Humidity Sensor Pro</title>
+      <link>http://wiki.seeed.cc/grove-temperature_and_humidity_sensor_pro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-temperature_and_humidity_sensor_pro/</guid>
+      <description>This is a powerful sister version of our Grove - Temperature and Humidity Sensor. It has more complete and accurate performance than the basic version. The detecting range of this sensor is 5% RH - 99% RH, and -40°C - 80°C. And its accuracy reaches up to 2% RH and 0.5°C. A professional choice for applications that have relatively strict requirements.
+
+Specification    Item Min Norm Max Unit     VCC 3.</description>
+    </item>
+    
+    <item>
+      <title>Grove - Ultrasonic Ranger</title>
+      <link>http://wiki.seeed.cc/grove-ultrasonic_ranger/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-ultrasonic_ranger/</guid>
+      <description>This Grove - Ultrasonic sensor is a non-contact distance measurement module which works at 40KHz, suitable for projects that require middle distance measurement.
+
+Product Update We have made some update on this product in order to improve the power stability when working with some low-voltage main board. The update includes:
+ Added an capacitance C14 Redesigned the layout to make it more tidy Compatible with 3.3V voltage system  Here we use 2 photos to show the difference:</description>
+    </item>
+    
+  </channel>
+</rss>

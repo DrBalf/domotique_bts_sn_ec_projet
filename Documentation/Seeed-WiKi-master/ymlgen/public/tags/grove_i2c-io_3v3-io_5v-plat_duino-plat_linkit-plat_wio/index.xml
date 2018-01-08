@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grove_i2c Io_3v3 Io_5v Plat_duino Plat_linkit Plat_wio on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/grove_i2c-io_3v3-io_5v-plat_duino-plat_linkit-plat_wio/</link>
+    <description>Recent content in Grove_i2c Io_3v3 Io_5v Plat_duino Plat_linkit Plat_wio on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/grove_i2c-io_3v3-io_5v-plat_duino-plat_linkit-plat_wio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - 3-Axis Digital Accelerometer(±1.5g)</title>
+      <link>http://wiki.seeed.cc/grove-3-axis_digital_accelerometer-1.5g/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-3-axis_digital_accelerometer-1.5g/</guid>
+      <description>Grove - 3-Axis Digital Accelerometer v1.2  Grove - 3-Axis Digital Accelerometer v1.2b     3-Axis Digital Accelerometer is the key part in projects like orientation detection, gesture detection and Motion detection. This 3-Axis Digital Accelerometer(±1.5g) is based on Freescale&amp;rsquo;s low power consumption module, MMA7660FC. It features up to 10,000g high shock survivability and configurable Samples per Second rate.</description>
+    </item>
+    
+    <item>
+      <title>Grove - Multichannel Gas Sensor</title>
+      <link>http://wiki.seeed.cc/grove-multichannel_gas_sensor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-multichannel_gas_sensor/</guid>
+      <description>Grove – Multichannel Gas sensor is a environment detecting sensor with a built in MiCS-6814 which can detect many unhealthful gases, and three gases can be measured simultaneously due to its multi channels, so it can help you to monitor the concentration which more than one gas.
+This sensor belongs to Grove system, and you can plug it onto the Base shield and work with Arduino directly without any jumper wires.</description>
+    </item>
+    
+  </channel>
+</rss>

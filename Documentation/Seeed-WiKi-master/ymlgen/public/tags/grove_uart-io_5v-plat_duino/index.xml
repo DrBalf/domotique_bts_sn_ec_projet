@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grove_uart Io_5v Plat_duino on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/grove_uart-io_5v-plat_duino/</link>
+    <description>Recent content in Grove_uart Io_5v Plat_duino on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/grove_uart-io_5v-plat_duino/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - 315MHz RF Kit</title>
+      <link>http://wiki.seeed.cc/grove-315mhz_rf_kit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-315mhz_rf_kit/</guid>
+      <description>This kit is used for one way wireless communication at a frequency of 315MHz and includes a transmitter module and a receiver module. The twig configuration of this kit allows for around 40 meters of transmitting distance indoors, or around 100 meters outside. The 315 MHz frequency is suitable for use without a license in the United States. For use in Europe, please see the 433 MHz version of this product.</description>
+    </item>
+    
+    <item>
+      <title>Grove - Serial Camera</title>
+      <link>http://wiki.seeed.cc/grove-serial_camera/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-serial_camera/</guid>
+      <description>The Serial Camera is a JPEG color camera module easy for MCU use.It has integrated image processing DSP to generate 320*240 or 640*480 JPEG image without thumbnail information, Captured picture will be stored in internal buffer and transferred via UART port.
+
+Features  Grove Interface JPEG compressed image without Thumbnail Information 5V power supply Small and compact Protocol control  !!!Tip More details about Grove modules please refer to Grove System</description>
+    </item>
+    
+  </channel>
+</rss>

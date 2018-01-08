@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plat_duino Plat_bbg Plat_linkit    on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/plat_duino-plat_bbg-plat_linkit---/</link>
+    <description>Recent content in Plat_duino Plat_bbg Plat_linkit    on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/plat_duino-plat_bbg-plat_linkit---/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - Barometer Sensor(BME280)</title>
+      <link>http://wiki.seeed.cc/grove-barometer_sensor-bme280/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-barometer_sensor-bme280/</guid>
+      <description>Grove - Barometer Sensor (BME280) is a breakout board for Bosch BMP280 high-precision, low-power combined humidity, pressure, and temperature sensor. This module can be used to measure temperature, atmospheric pressure and humidity accurately and fast. As the atmospheric pressure changes with altitude, it can also measure approximate altitude of a place. It can be connected to a microcontroller with I2C (integrated with Grove socket) or through SPI bus. We have also provided highly abstracted library to make this more product easier to use.</description>
+    </item>
+    
+  </channel>
+</rss>

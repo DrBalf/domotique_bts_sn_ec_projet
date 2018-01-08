@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grove_i2c Io_3v3 Io_5v Plat_duino Plat_linkit Plat_pi Plat_bbg on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/grove_i2c-io_3v3-io_5v-plat_duino-plat_linkit-plat_pi-plat_bbg/</link>
+    <description>Recent content in Grove_i2c Io_3v3 Io_5v Plat_duino Plat_linkit Plat_pi Plat_bbg on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/grove_i2c-io_3v3-io_5v-plat_duino-plat_linkit-plat_pi-plat_bbg/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - I2C ADC</title>
+      <link>http://wiki.seeed.cc/grove-i2c_adc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-i2c_adc/</guid>
+      <description>Grove - I2C ADC is a 12-bit precision ADC module based on ADC121C021. It helps you increase the accuracy of value collected from analog sensor by providing a constant reference voltage. Because its address is changeable, you can use up to 9 I2C ADC at the same time at most. At the other hand, this module provides auto sleep function which lowers the power consumption considerably.
+
+Features  Low power consumption High precision Automatic power-down mode Address changeable  !</description>
+    </item>
+    
+  </channel>
+</rss>

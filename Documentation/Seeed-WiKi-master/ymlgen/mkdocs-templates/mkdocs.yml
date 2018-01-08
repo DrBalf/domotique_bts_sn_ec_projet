@@ -1,0 +1,95 @@
+site_name: Seeed Wiki
+site_url: http://wiki.seeed.cc
+site_description: Seeedstudio product documentation
+site_author: Seeedstudio Team
+
+repo_url: https://github.com/SeeedDocument/Seeed-Wiki/
+
+pages:
+- Home: index.md
+
+- Platform:
+    - Platform Introduction: Platform.md
+    - Arduino:
+        - Arduino Introduction: Arduino.md
+{{ range .Data.Pages.ByTitle }}{{ $cat1 := trim (index (split .Params.category ",") 0) " "}}{{ $cat2 := trim (index (split .Params.category ",") 1) " "}}{{if or (eq $cat1 "Arduino") (eq $cat2 "Arduino") }}        - {{.Title}}: {{.File.Path}}{{"\n"}}{{ end }}{{ end }}
+    - BeagleBone:
+        - BeagleBone Introduction: BeagleBone.md
+{{ range .Data.Pages.ByTitle }}{{ $cat1 := trim (index (split .Params.category ",") 0) " "}}{{ $cat2 := trim (index (split .Params.category ",") 1) " "}}{{if or (eq $cat1 "BeagleBone") (eq $cat2 "BeagleBone") }}        - {{.Title}}: {{.File.Path}}{{"\n"}}{{ end }}{{ end }}
+    - Raspberry Pi:
+        - Raspberry Pi Introduction: Raspberry_Pi.md
+{{ range .Data.Pages.ByTitle }}{{ $cat1 := trim (index (split .Params.category ",") 0) " "}}{{ $cat2 := trim (index (split .Params.category ",") 1) " "}}{{if or (eq $cat1 "Raspberry Pi") (eq $cat2 "Raspberry Pi") }}        - {{.Title}}: {{.File.Path}}{{"\n"}}{{ end }}{{ end }}
+    - LinkIt:
+        - LinkIt Introduction: LinkIt.md
+{{ range .Data.Pages.ByTitle }}{{ $cat1 := trim (index (split .Params.category ",") 0) " "}}{{ $cat2 := trim (index (split .Params.category ",") 1) " "}}{{if or (eq $cat1 "LinkIt") (eq $cat2 "LinkIt") }}        - {{.Title}}: {{.File.Path}}{{"\n"}}{{ end }}{{ end }}
+    - mbed:
+        - mbed Introduction: mbed.md
+{{ range .Data.Pages.ByTitle }}{{ $cat1 := trim (index (split .Params.category ",") 0) " "}}{{ $cat2 := trim (index (split .Params.category ",") 1) " "}}{{if or (eq $cat1 "mbed") (eq $cat2 "mbed") }}        - {{.Title}}: {{.File.Path}}{{"\n"}}{{ end }}{{ end }}
+    - RePhone:
+        - RePhone Introduction: RePhone.md
+{{ range .Data.Pages.ByTitle }}{{ $cat1 := trim (index (split .Params.category ",") 0) " "}}{{ $cat2 := trim (index (split .Params.category ",") 1) " "}}{{if or (eq $cat1 "RePhone") (eq $cat2 "RePhone") }}        - {{.Title}}: {{.File.Path}}{{"\n"}}{{ end }}{{ end }}
+    - Wio:
+        - Wio Introduction: Wio.md
+{{ range .Data.Pages.ByTitle }}{{ $cat1 := trim (index (split .Params.category ",") 0) " "}}{{ $cat2 := trim (index (split .Params.category ",") 1) " "}}{{if or (eq $cat1 "Wio") (eq $cat2 "Wio") }}        - {{.Title}}: {{.File.Path}}{{"\n"}}{{ end }}{{ end }}
+    - Wio_Tracker:
+        - Wio_Tracker Introduction: Wio_Tracker.md
+{{ range .Data.Pages.ByTitle }}{{ $cat1 := trim (index (split .Params.category ",") 0) " "}}{{ $cat2 := trim (index (split .Params.category ",") 1) " "}}{{if or (eq $cat1 "Wio_Tracker") (eq $cat2 "Wio_Tracker") }}        - {{.Title}}: {{.File.Path}}{{"\n"}}{{ end }}{{ end }}
+    - Shield:
+        - Shield Introduction: Shield.md
+{{ range .Data.Pages.ByTitle }}{{ $cat1 := trim (index (split .Params.category ",") 0) " "}}{{ $cat2 := trim (index (split .Params.category ",") 1) " "}}{{if or (eq $cat1 "Shield") (eq $cat2 "Shield") }}        - {{.Title}}: {{.File.Path}}{{"\n"}}{{ end }}{{ end }}
+    - Wireless:
+        - Wireless Introduction: Wireless.md
+{{ range .Data.Pages.ByTitle }}{{ $cat1 := trim (index (split .Params.category ",") 0) " "}}{{ $cat2 := trim (index (split .Params.category ",") 1) " "}}{{if or (eq $cat1 "Wireless") (eq $cat2 "Wireless") }}        - {{.Title}}: {{.File.Path}}{{"\n"}}{{ end }}{{ end }}
+    - Essentials:
+        - Essentials Introduction: Essentials.md
+{{ range .Data.Pages.ByTitle }}{{ $cat1 := trim (index (split .Params.category ",") 0) " "}}{{ $cat2 := trim (index (split .Params.category ",") 1) " "}}{{if or (eq $cat1 "Essentials") (eq $cat2 "Essentials") }}        - {{.Title}}: {{.File.Path}}{{"\n"}}{{ end }}{{ end }}
+    - ReSpeaker:
+        - ReSpeaker Introduction: ReSpeaker.md
+{{ range .Data.Pages.ByTitle }}{{ $cat1 := trim (index (split .Params.category ",") 0) " "}}{{ $cat2 := trim (index (split .Params.category ",") 1) " "}}{{if or (eq $cat1 "ReSpeaker") (eq $cat2 "ReSpeaker") }}        - {{.Title}}: {{.File.Path}}{{"\n"}}{{ end }}{{ end }}
+
+
+
+- Grove:
+    - Grove Introduction: Grove.md
+    - Grove System: Grove_System.md
+    - Sensor:
+        - Sensor Introduction: Sensor.md
+{{ range .Data.Pages.ByTitle }}{{ $cat1 := trim (index (split .Params.category ",") 0) " "}}{{ $cat2 := trim (index (split .Params.category ",") 1) " "}}{{if or (eq $cat1 "Sensor") (eq $cat2 "Sensor") }}        - {{.Title}}: {{.File.Path}}{{"\n"}}{{ end }}{{ end }}
+    - Actuator:
+        - Actuator Introduction: Actuator.md
+{{ range .Data.Pages.ByTitle }}{{ $cat1 := trim (index (split .Params.category ",") 0) " "}}{{ $cat2 := trim (index (split .Params.category ",") 1) " "}}{{if or (eq $cat1 "Actuator") (eq $cat2 "Actuator") }}        - {{.Title}}: {{.File.Path}}{{"\n"}}{{ end }}{{ end }}
+    - Display:
+        - Display Introduction: Display.md
+{{ range .Data.Pages.ByTitle }}{{ $cat1 := trim (index (split .Params.category ",") 0) " "}}{{ $cat2 := trim (index (split .Params.category ",") 1) " "}}{{if or (eq $cat1 "Display") (eq $cat2 "Display") }}        - {{.Title}}: {{.File.Path}}{{"\n"}}{{ end }}{{ end }}
+    - Communication:
+        - Communication Introduction: Communication.md
+{{ range .Data.Pages.ByTitle }}{{ $cat1 := trim (index (split .Params.category ",") 0) " "}}{{ $cat2 := trim (index (split .Params.category ",") 1) " "}}{{if or (eq $cat1 "Communication") (eq $cat2 "Communication") }}        - {{.Title}}: {{.File.Path}}{{"\n"}}{{ end }}{{ end }}
+    - Others:
+        - Others Introduction: Others.md
+{{ range .Data.Pages.ByTitle }}{{ $cat1 := trim (index (split .Params.category ",") 0) " "}}{{ $cat2 := trim (index (split .Params.category ",") 1) " "}}{{if or (eq $cat1 "Others") (eq $cat2 "Others") }}        - {{.Title}}: {{.File.Path}}{{"\n"}}{{ end }}{{ end }}
+
+- Tutorial:
+        - Tutorial Introduction: Tutorial.md
+{{ range .Data.Pages.ByTitle }}{{ $cat1 := trim (index (split .Params.category ",") 0) " "}}{{ $cat2 := trim (index (split .Params.category ",") 1) " "}}{{if or (eq $cat1 "Tutorial") (eq $cat2 "Tutorial") }}        - {{.Title}}: {{.File.Path}}{{"\n"}}{{ end }}{{ end }}
+
+- MakerPro:
+        - MakerPro Introduction: MakerPro.md
+{{ range .Data.Pages.ByTitle }}{{ $cat1 := trim (index (split .Params.category ",") 0) " "}}{{ $cat2 := trim (index (split .Params.category ",") 1) " "}}{{if or (eq $cat1 "MakerPro") (eq $cat2 "MakerPro") }}        - {{.Title}}: {{.File.Path}}{{"\n"}}{{ end }}{{ end }}
+
+- Discontinued:
+        - Discontinued Introduction: Discontinued.md
+{{ range .Data.Pages.ByTitle }}{{ $cat1 := trim (index (split .Params.category ",") 0) " "}}{{ $cat2 := trim (index (split .Params.category ",") 1) " "}}{{if or (eq $cat1 "Discontinued") (eq $cat2 "Discontinued") }}        - {{.Title}}: {{.File.Path}}{{"\n"}}{{ end }}{{ end }}
+
+- About:
+    - About Introduction: About.md
+    - License: License.md
+    - Survey: survey_end.md
+    - 404: 404.md
+
+theme_dir: mkdocs/themes/readthedocs
+
+markdown_extensions:
+    - toc:
+        permalink: 
+    - admonition:
+    - smarty

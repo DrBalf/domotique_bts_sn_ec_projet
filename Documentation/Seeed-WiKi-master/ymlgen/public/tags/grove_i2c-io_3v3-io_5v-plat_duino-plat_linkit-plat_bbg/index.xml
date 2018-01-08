@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grove_i2c Io_3v3 Io_5v Plat_duino Plat_linkit Plat_bbg on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/grove_i2c-io_3v3-io_5v-plat_duino-plat_linkit-plat_bbg/</link>
+    <description>Recent content in Grove_i2c Io_3v3 Io_5v Plat_duino Plat_linkit Plat_bbg on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/grove_i2c-io_3v3-io_5v-plat_duino-plat_linkit-plat_bbg/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - 3-Axis Digital Accelerometer(±400g)</title>
+      <link>http://wiki.seeed.cc/grove-3-axis_digital_accelerometer-400g/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-3-axis_digital_accelerometer-400g/</guid>
+      <description>The H3LIS331DL is a low power high performance 3-axis linear accelerometer belonging to the “nano” family, with digital I2C serial interface standard output. The device features ultra low power operational modes that allow advanced power saving and smart sleep to wake-up functions. The H3LIS331DL has dynamically user selectable full scales of ±100g/±200 g/±400 g and it is capable of measuring accelerations with output data rates from 0.5 Hz to 1 kHz.</description>
+    </item>
+    
+    <item>
+      <title>Grove - IMU 10DOF</title>
+      <link>http://wiki.seeed.cc/grove-imu_10dof/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-imu_10dof/</guid>
+      <description>Grove - IMU 10DOF is a combination of Grove - IMU 9DOF and Grove - Barometer Sensor (BMP180)&amp;rdquo;). This module is base on MPU-9250 and BMP180, the MPU-9250 is a 9-axis MotionTracking device that combines a 3-axis gyroscope, 3-axis accelerometer, 3-axis magnetometer and a Digital Motion Processor(DMP), and BMP180 is a high precision, ultra-low power digital pressure sensors for consumer applications. This module is very suitable for the application of smartphones, tablets and wearable devices.</description>
+    </item>
+    
+    <item>
+      <title>Grove - IMU 10DOF v2.0</title>
+      <link>http://wiki.seeed.cc/grove-imu_10dof_v2.0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-imu_10dof_v2.0/</guid>
+      <description>Grove-IMU 10DOF v2.0 is a upgrade version of Grove-IMU-10DOF， which replace BMP180 with BMP280. As the successor to the widely adopted BMP180, the BMP280 delivers high performance in all applications that require precise pressure measurement. This module is base on MPU-9250 and BMP280, the MPU-9250 is a 9-axis MotionTracking device that combines a 3-axis gyroscope, 3-axis accelerometer, 3-axis magnetometer and a Digital Motion Processor(DMP), and BMP280 is a high precision, ultra-low power digital pressure sensors for consumer applications.</description>
+    </item>
+    
+    <item>
+      <title>Grove - IMU 9DOF v2.0</title>
+      <link>http://wiki.seeed.cc/grove-imu_9dof_v2.0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-imu_9dof_v2.0/</guid>
+      <description>Grove - IMU 9DOF v2.0 is an upgraded version of Grove - IMU 9DOF v1.0 and it is a high performance 9-axis motion tracking module, which is based on MPU-9250. The MPU-9250 is an integrated 9-axis motion tracking device designed for the low power, low cost, and high performance requirements of consumer electronics equipment including smartphones, tablets and wearable sensors. MPU-9250 features three 16-bit ADC for digitizing the gyroscope outputs and three 16-bit ADCs for digitizing the accelerometer outputs and three 16-bit ADCs for digitizing the magnetometer outputs.</description>
+    </item>
+    
+  </channel>
+</rss>

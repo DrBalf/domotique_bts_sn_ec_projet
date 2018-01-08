@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grove_uart Io_3v3 Io_5v Plat_duino Plat_linkit on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/grove_uart-io_3v3-io_5v-plat_duino-plat_linkit/</link>
+    <description>Recent content in Grove_uart Io_3v3 Io_5v Plat_duino Plat_linkit on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/grove_uart-io_3v3-io_5v-plat_duino-plat_linkit/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - BLE (dual model) v1.0</title>
+      <link>http://wiki.seeed.cc/grove-ble-dual_model-v1.0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-ble-dual_model-v1.0/</guid>
+      <description>Grove - BLE (dual model) v1.0 uses CSR dual mode Bluetooth chip. The chip is based on ARM architecture and supports AT instructions. Users can develop flexibly according to the serial baud rate, equipment name, pairing password.
+
+Features  BT Version: Bluetooth Specification V4.0 &amp;amp; BLE UART send and receive max bytes is 512 Other device to module in SPP mode: 90 Bytes per packet Other device to module in BLE mode: 20 Bytes per packet Two data transmission mode, balance mode and high speed mode Working frequency: 2.</description>
+    </item>
+    
+    <item>
+      <title>Grove - CO2 Sensor</title>
+      <link>http://wiki.seeed.cc/grove-co2_sensor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-co2_sensor/</guid>
+      <description>The Grove - CO2 Sensor module is infrared CO2 sensor high sensitivity and high resolution. Infrared CO2 sensor MH-Z16 Is a general-purpose, small sensors, the use of non-dispersive infrared (NDIR) Present in the principle of the air CO2 Detect, with good selectivity, oxygen- dependent, long life, built-in temperature sensor, temperature compensation, with UART output, easy to use. It can be widely used in HVAC and indoor air quality monitoring, industrial process monitoring and security, agriculture and livestock production process monitoring.</description>
+    </item>
+    
+    <item>
+      <title>Grove - Serial MP3 Player</title>
+      <link>http://wiki.seeed.cc/grove-serial_mp3_player/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-serial_mp3_player/</guid>
+      <description>Grove-Serial MP3 Player is a kind of simple MP3 player device whose design is based on a high-quality MP3 audio chip&amp;mdash;WT5001. It can support 8KHZ~44.1kHZ sampling frequency MP3 and WAV file formats. This product has several peripheral ports: a standard UART Grove interface, a dual track headphone jack, an external interface and also a Micro SD card interface. You can control the MP3 playback state by sending commands to module via serial port tools, such as switch songs, change the volume and play mode and so on.</description>
+    </item>
+    
+    <item>
+      <title>Grove BLE v1</title>
+      <link>http://wiki.seeed.cc/grove-ble_v1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-ble_v1/</guid>
+      <description>Grove - BLE v1 (Grove - Bluetooth Low Energy v1) uses a Low Energy Bluetooth module &amp;ndash; HM-11, based on TI CC2540 chip, which has AT command support. As a Grove product it&amp;rsquo;s convenient to use Grove - BLE with Arduino board via Base Shield.
+
+Parameters    Specifications Name     BT Version Bluetooth Specification V4.0 BLE   Working frequency 2.4GHz ISM band   Modulation method GFSK(Gaussian Frequency Shift Keying)   RF Power -23dbm, -6dbm, 0dbm, 6dbm, can modify through AT Command AT+POWE   Speed Asynchronous: 6K Bytes, Synchronous: 6K Bytes   Sensitivity ≤-84dBm at 0.</description>
+    </item>
+    
+  </channel>
+</rss>

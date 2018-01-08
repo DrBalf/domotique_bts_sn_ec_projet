@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Io_3v3 Io_5v Plat_duino Plat_linkit Plat_bbg Plat_wio Plat_pi Plat_linkit on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/io_3v3-io_5v-plat_duino-plat_linkit-plat_bbg-plat_wio-plat_pi-plat_linkit/</link>
+    <description>Recent content in Io_3v3 Io_5v Plat_duino Plat_linkit Plat_bbg Plat_wio Plat_pi Plat_linkit on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/io_3v3-io_5v-plat_duino-plat_linkit-plat_bbg-plat_wio-plat_pi-plat_linkit/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - Sound Sensor</title>
+      <link>http://wiki.seeed.cc/grove-sound_sensor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-sound_sensor/</guid>
+      <description>Grove - Sound Sensor can detect the sound intensity of the environment. The main component of the module is a simple microphone, which is based on the LM386 amplifier and an electret microphone. This module&amp;rsquo;s output is analog and can be easily sampled and tested by a Seeeduino.
+
+Features  Easy to use Provides analog output signal Easily integrates with Logic modules on the input side of Grove circuits Grove System  !</description>
+    </item>
+    
+  </channel>
+</rss>

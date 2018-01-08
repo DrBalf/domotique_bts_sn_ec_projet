@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grove_i2c Io_3v3 Io_5v Plat_duino Plat_linkit on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/grove_i2c-io_3v3-io_5v-plat_duino-plat_linkit/</link>
+    <description>Recent content in Grove_i2c Io_3v3 Io_5v Plat_duino Plat_linkit on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/grove_i2c-io_3v3-io_5v-plat_duino-plat_linkit/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - 3-Axis Analog Accelerometer</title>
+      <link>http://wiki.seeed.cc/grove-3-axis_analog_accelerometer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-3-axis_analog_accelerometer/</guid>
+      <description>The ADXL335 is a small, thin, low power, complete 3-axis accelerometer with signal conditioned voltage outputs. The product measures acceleration with a minimum full-scale range of ±3 g. The module was designed as breakout board because ADXL335&amp;rsquo;s signal is analog( more ports requested ). But the board outline is grove module that you can fix it conveniently like other groves. The sensor combined 3.3 and 5V power supply, can be used in standard Arduino device and Seeeduino Stalker.</description>
+    </item>
+    
+    <item>
+      <title>Grove - Barometer (High-Accuracy)</title>
+      <link>http://wiki.seeed.cc/grove-barometer-high-accuracy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-barometer-high-accuracy/</guid>
+      <description>This Grove - Barometer (High-Accuracy) Sensor features a HP206C high-accuracy chip to detect barometric pressure ,Altimeter and temperature. It can widely measure pressure ranging from 300mbar~1200mbar, with a super high accuracy of 0.01mbar(0.1m) in ultra-high resolution mode.The chip only accepts 1.8V to 3.6V input voltage. However, with outer circuit added, this module becomes compatible with 3.3V and 5V. Therefore, it can be used on Arduino/Seeeduino or Seeeduino Stalker without modification.</description>
+    </item>
+    
+    <item>
+      <title>Grove - Digital Infrared Temperature Sensor</title>
+      <link>http://wiki.seeed.cc/grove-digital_infrared_temperature_sensor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-digital_infrared_temperature_sensor/</guid>
+      <description>The Digital Infrared temperature sensor is a non-contact temperature measurement module which bases on MLX90615.Both the IR sensitive thermopile detector chip and the signal conditioning chip are integrated in the same package.This module communicates with Arduino using SMBus,up to 127 sensors can be read via common 2 wires.Thanks to the module&amp;rsquo;s low noise amplifier, 16-bit ADC and powerful DSP unit, it can achieved a high accuracy of 1℃ over wide temperature rage and a high measurement resolution of 0.</description>
+    </item>
+    
+    <item>
+      <title>Grove - Haptic Motor</title>
+      <link>http://wiki.seeed.cc/grove-haptic_motor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-haptic_motor/</guid>
+      <description>Grove - Haptic motor is a grove module integrated with DRV2605L which will give your project more feelings. This motor is specially designed for various effects, such as ramping the vibration level up and down, for wearables and other IoT devices. Right now we have developed an easy-to-use library which simulate 123 kinds in total of vibrating modes and this will make your prototyping quicker. Also, you can develop more advanced functions with driver DRV2605L which will improve actuator performance in terms of acceleration consistency, start time, and break time and is accessible through a shared I2C compatible bus or PWM input signal.</description>
+    </item>
+    
+    <item>
+      <title>Grove - High Precision RTC</title>
+      <link>http://wiki.seeed.cc/grove_high_precision_rtc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove_high_precision_rtc/</guid>
+      <description>Grove - High Precision RTC based on the clock chip PCF85063TP which is a CMOS Real-Time Clock (RTC) and calendar optimized for low power consumption. An offset register allows fine-tuning of the clock. All addresses and data are transferred serially via the I2C bus and the maximum bus speed is 400 kbit/s.
+Compared to Grove - RTC, this module can provide a more accurate result. And provide a programmable clock output for peripheral devices as well as minute and half minute interrupt.</description>
+    </item>
+    
+    <item>
+      <title>Grove - I2C Color Sensor</title>
+      <link>http://wiki.seeed.cc/grove-i2c_color_sensor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-i2c_color_sensor/</guid>
+      <description>This module is based on the color sensor TCS3414CS with digital output I2C. Based on the 8*2 array of filtered photodiodes and 16-bit analog-to-digital converters, you can measure the color chromaticity of ambient light or the color of objects. Of the 16 photodiodes, 4 have red filters, 4 have green filters, 4 have blue filters and 4 have no filter(clear). With the synchronization input pin, an external pulsed light source can provide precise synchronous conversion control.</description>
+    </item>
+    
+    <item>
+      <title>Grove - I2C FM Receiver</title>
+      <link>http://wiki.seeed.cc/grove-i2c_fm_receiver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-i2c_fm_receiver/</guid>
+      <description>Grove - I2C FM Receiver is a wideband FM receiver module, this module is based on RDA5807M. The RDA5807M series are the latest generation single-chip broadcast FM stereo radio tuner with fully integrated synthesizer. The RDA5807M series have a powerful low-IF digital audio processor. The Grove - I2C FM Receiver has a headset jack, so it can connect to earphones or audio.
+
+Version    Revision Description Release date     Grove - I2C FM Receiver v1.</description>
+    </item>
+    
+    <item>
+      <title>Grove - I2C Touch Sensor</title>
+      <link>http://wiki.seeed.cc/grove-i2c_touch_sensor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-i2c_touch_sensor/</guid>
+      <description>The I2C Touch Sensor is based on the Proximity Capacitive Touch Sensor Controller from FreeScale - MPR121. It detects the touch or proximity of human fingers. This sensor includes a Touch Sensor controller and 4 finger feelers. One can insert the connectors of feelers into base of Sensor controller, and start sensing the touch.
+
+Specifications    Parameter Value/Range     Operating voltage 3~5.5V   Standby Mode Current 2μA   Touch Channels 12 (Including 4 with Touch feelers)   Communicating Protocol I2C   I2C Address 0x5A - 0x5D    !</description>
+    </item>
+    
+    <item>
+      <title>Grove - Mini I2C Motor Driver v1.0</title>
+      <link>http://wiki.seeed.cc/grove-mini_i2c_motor_driver_v1.0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-mini_i2c_motor_driver_v1.0/</guid>
+      <description>This Grove - MIni I2C motor driver includes two DRV8830. The DRV8830 provides an integrated motor driver solution for battery-powered toys, printers, and other low-voltage or battery-powered motion control applications. The module has two H-bridge drivers, and can drive two DC motors or two winding of stepper motors, as well as other loads like solenoids.It requires an onboard 5V voltage regulator which can power the I2C bus. All driver lines are diode protected from back EMF.</description>
+    </item>
+    
+    <item>
+      <title>Grove - NFC</title>
+      <link>http://wiki.seeed.cc/grove-nfc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-nfc/</guid>
+      <description>Near Field Communication (NFC) is a set of short-range wireless technologies. It is behind daily applications such as access control system and mobile payment system. Grove NFC features a highly integrated transceiver module PN532 which handles contactless communication at 13.56MHz. You can read and write a 13.56MHz tag with this module or implement point to point data exchange with two NFCs. Grove NFC is designed to use I2C or UART communication protocols, and UART is the default mode.</description>
+    </item>
+    
+    <item>
+      <title>Grove - Temperature&amp;Humidity Sensor (HDC1000)</title>
+      <link>http://wiki.seeed.cc/grove-temperatureandhumidity_sensor-hdc1000/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-temperatureandhumidity_sensor-hdc1000/</guid>
+      <description>Grove - Temperature&amp;amp;Humidity Sensor (HDC1000) utilizes a HDC1000 sensor.HDC1000 was designed by Texas Instruments.It is a digital humidity sensor with integrated temperature sensor that provides excellent measurement accuracy at very low power.The device measures humidity based on a novel capacitive sensor.The humidity and temperature sensors are factory calibrated.The innovative WLCSP (Wafer Level Chip Scale Package) simplifies board design with the use of an ultra-compact package. The sensing element of the HDC1000 is placed on the bottom part of the device, which makes the HDC1000 more robust against dirt, dust, and other environmental contaminants.</description>
+    </item>
+    
+    <item>
+      <title>Grove - Temperature&amp;Humidity Sensor (High-Accuracy &amp;Mini) v1.0</title>
+      <link>http://wiki.seeed.cc/grove-temptureandhumidity_sensor-high-accuracy_andmini-v1.0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-temptureandhumidity_sensor-high-accuracy_andmini-v1.0/</guid>
+      <description>This is a multifunctional sensor that gives you temperature and relative humidity information at the same time. It utilizes a TH02 sensor that can meet measurement needs of general purposes. It provides reliable readings when environment humidity condition in between 0-80% RH, and temperature condition in between 0-70°C, covering needs in most home and daily applications that don&amp;rsquo;t contain extreme conditions.
+
+Specifications  Wide operating voltage range  (3.</description>
+    </item>
+    
+  </channel>
+</rss>

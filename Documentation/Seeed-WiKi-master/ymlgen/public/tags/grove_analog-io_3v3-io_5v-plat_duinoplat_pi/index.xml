@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grove_analog Io_3v3 Io_5v Plat_duinoplat_pi on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/grove_analog-io_3v3-io_5v-plat_duinoplat_pi/</link>
+    <description>Recent content in Grove_analog Io_3v3 Io_5v Plat_duinoplat_pi on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/grove_analog-io_3v3-io_5v-plat_duinoplat_pi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - 80cm Infrared Proximity Sensor</title>
+      <link>http://wiki.seeed.cc/grove-80cm_infrared_proximity_sensor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-80cm_infrared_proximity_sensor/</guid>
+      <description>The 80cm Infrared Proximity Sensor is a General Purpose Type Distance Measuring Sensor. This sensor SharpGP2Y0A21YK, boasts a small package and very low current consumption, takes a continuous distance reading and returns a corresponding analog voltage with a range of 10cm (4&amp;rdquo;) to 80cm (30&amp;rdquo;). Can be used in TVs, personal computers, cars and so on.
+
+Features  Easy to use Wide supply voltage range: 2.5V–7V Grove Interface  !</description>
+    </item>
+    
+    <item>
+      <title>Grove - Thumb Joystick</title>
+      <link>http://wiki.seeed.cc/grove-thumb_joystick/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-thumb_joystick/</guid>
+      <description>Grove - Thumb Joystick is a Grove compatible module which is very similar to the &amp;lsquo;analog&amp;rsquo; joystick on PS2 (PlayStation 2) controllers. The X and Y axes are two ~10k potentiometers which control 2D movement by generating analog signals. The joystick also has a push button that could be used for special applications. When the module is in working mode, it will output two analog values, representing two directions. Compared to a normal joystick, its output values are restricted to a smaller range (i.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grove_digital Io_3v3 Io_5v Plat_duino Plat_linkit Plat_pi Plat_bbg on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/grove_digital-io_3v3-io_5v-plat_duino-plat_linkit-plat_pi-plat_bbg/</link>
+    <description>Recent content in Grove_digital Io_3v3 Io_5v Plat_duino Plat_linkit Plat_pi Plat_bbg on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/grove_digital-io_3v3-io_5v-plat_duino-plat_linkit-plat_pi-plat_bbg/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - Collision Sensor</title>
+      <link>http://wiki.seeed.cc/grove-collision_sensor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-collision_sensor/</guid>
+      <description>Grove - Collision Sensor can detect whether any collision movement or vibration happens. It will output a low pulse signal when vibration is detected. To make the output signal more reliable and neat, we added a necessary exterior circuit to reduce the noise impact. So, normal shaking will not cause any output. The sensor has a high sensitivity. You can use it to apply to your project, such as automatic wake-up and power-down for battery management.</description>
+    </item>
+    
+    <item>
+      <title>Grove - FM Receiver</title>
+      <link>http://wiki.seeed.cc/grove-fm_receiver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-fm_receiver/</guid>
+      <description>Grove - FM Receiver is a wideband FM receiver module, this module is base on SX6119, it offers true single-chip voice FM receiver, which is built-in amplifier, VCO, filter and demodulator. The multifunction button provides greater convenience for users to control.
+
+Features  Grove interface FM receiver with a tuning range of 64 MHz to 108 MHz covering Eastern Europe (OIRT), Japan, Europe and US bands Lower power consumption Multifunction button LED Indicator Headsets interface  !</description>
+    </item>
+    
+    <item>
+      <title>Grove - GSR Sensor</title>
+      <link>http://wiki.seeed.cc/grove-gsr_sensor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-gsr_sensor/</guid>
+      <description>GSR, standing for galvanic skin response, is a method of measuring the electrical conductance of the skin. Strong emotion can cause stimulus to your sympathetic nervous system, resulting more sweat being secreted by the sweat glands. Grove – GSR allows you to spot such strong emotions by simple attaching two electrodes to two fingers on one hand, an interesting gear to create emotion related projects, like sleep quality monitor.</description>
+    </item>
+    
+    <item>
+      <title>Grove - MOSFET</title>
+      <link>http://wiki.seeed.cc/grove-mosfet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-mosfet/</guid>
+      <description>Grove – MOSFET enables you to control higher voltage project, say 15VDC, with low voltage, say 5V, on microcontroller. MOSFET is also a kind of switch, but its switching frequency can reach up to 5MHz, much faster than normal mechanical relay. There are two screw terminals on the board. One for outer power source and the other for device you want to control. Grove – MOSFET will pass the power from one end to another when closed.</description>
+    </item>
+    
+    <item>
+      <title>Grove - Switch(P)</title>
+      <link>http://wiki.seeed.cc/grove-switch-p/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-switch-p/</guid>
+      <description>This Grove – Switch is a mini SPDT slide, great for “ON/OFF” situations. It is such a reliable switch of great build quality that we adopt it on many of our boards. You should stock some for your Grove prototyping system.
+What does “P” mean? “P” is for “panel mount” in this product.
+
+Features  Grove Interface Easy to use Basic Grove element  !</description>
+    </item>
+    
+    <item>
+      <title>Grove - Touch Sensor</title>
+      <link>http://wiki.seeed.cc/grove-touch_sensor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-touch_sensor/</guid>
+      <description>Grove - Touch Sensor enables you to replace press with touch. It can detect the change in capacitance when a finger is near by. That means no matter your finger directly touches the pad or just stays close to the pad, Grove - Touch Sensor would outputs HIGH also.
+
+Specifications  Operating Voltage: 2.0 - 5.5V Operating Current(Vcc=3V):1.5 - 3.0μA Operating Current(VDD=3V):3.5 - 7.0μA Output Response Time: 60 - 220mS Used Chipset: TTP223-BA6  !</description>
+    </item>
+    
+    <item>
+      <title>Grove - Vibration Motor</title>
+      <link>http://wiki.seeed.cc/grove-vibration_motor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-vibration_motor/</guid>
+      <description>This is a mini vibration motor suitable as a non-audible indicator. When the input is HIGH, the motor will vibrate just like your cell phone on silent mode.
+
+Version Tracker    Revision Description Release     v0.9b Initial public release May 10, 2011   v1.0 Directly uses an I/O port to drive Vibration Motor Nov 5, 2011   v1.2 Transistor added, uses bigger current to drive Vibration Motor July 11, 2013    Features  Grove compatible Non-audible Low power consumption High reliability  !</description>
+    </item>
+    
+    <item>
+      <title>Grove - Water Sensor</title>
+      <link>http://wiki.seeed.cc/grove-water_sensor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-water_sensor/</guid>
+      <description>The Water Sensor module is part of the Grove system. It indicates whether the sensor is dry, damp or completely immersed in water by measuring conductivity. The sensor traces have a weak pull-up resistor of 1 MΩ. The resistor will pull the sensor trace value high until a drop of water shorts the sensor trace to the grounded trace. Believe it or not this circuit will work with the digital I/O pins of your Arduino or you can use it with the analog pins to detect the amount of water induced contact between the grounded and sensor traces.</description>
+    </item>
+    
+  </channel>
+</rss>

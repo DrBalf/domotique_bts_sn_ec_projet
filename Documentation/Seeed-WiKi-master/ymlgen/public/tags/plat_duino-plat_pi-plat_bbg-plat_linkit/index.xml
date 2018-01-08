@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plat_duino Plat_pi Plat_bbg Plat_linkit on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</title>
+    <link>http://wiki.seeed.cc/tags/plat_duino-plat_pi-plat_bbg-plat_linkit/</link>
+    <description>Recent content in Plat_duino Plat_pi Plat_bbg Plat_linkit on A test config to generate mkdocs.yml frontmatter using Hugo&#39;s templating engine</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://wiki.seeed.cc/tags/plat_duino-plat_pi-plat_bbg-plat_linkit/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grove - LED Matrix Driver v1.0</title>
+      <link>http://wiki.seeed.cc/grove-led_matrix_driver_v1.0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-led_matrix_driver_v1.0/</guid>
+      <description>Grove - LED Matrix Driver v1.0 is UART (Serial) to dot matrix LED driver that incorporates various graphics functions.It can only support 32×64 LED matrix. This product is a Grove compatible UART interface. It provides easy and rich APIs that abstract the complexity of the underlying LED driving hardware. All you need to is just call these APIs in code to implement different functionalities for your project.
+Each dot(i.e pixel) support dual color LEDs.</description>
+    </item>
+    
+    <item>
+      <title>Grove - MP3 v2.0</title>
+      <link>http://wiki.seeed.cc/grove-mp3_v2.0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://wiki.seeed.cc/grove-mp3_v2.0/</guid>
+      <description>Grove - MP3 v2.0 is a tiny-sized and compact audio module. It supports various audio file operations for an audio file of MP3, WAV and WMV format, such as random music playing, play music in specific files, and so on. With serial communication, you can use all predefined command or command combinations to do all operations on music files. This module also supports general file systems such as FAT16 and FAT32.</description>
+    </item>
+    
+  </channel>
+</rss>
