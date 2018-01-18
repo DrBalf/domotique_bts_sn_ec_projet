@@ -1,0 +1,10 @@
+$lum(bool)				5sec
+$rad(bool)				5sec
+$vol(bool)				5sec
+$lux(lux)				10sec
+$tem(c°) 				5sec
+$hum(%) 				5sec
+$con(w)			(impulsion du compteur)
+$air(1-10) 				10sec
+$heu(hh/mm/ss)		(impulsion du compteur)
+
