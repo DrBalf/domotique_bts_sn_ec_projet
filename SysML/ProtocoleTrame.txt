@@ -1,14 +1,10 @@
- b
-$lum(bool)				5sec
-$rad(bool)				5sec
-$vol(bool)				5sec
-$lux(lux)				10sec
-$tem(c°) 				5sec
-$hum(%) 				5sec
-$con(w)			(impulsion du compteur)
-$air(1-10) 				10sec
-$heu(hh/mm/ss)		(impulsion du compteur)
-
-$lum(_)rad(_)vol(_)tem(__)hum(__);
-$lux(__)air(__);
-$con(__)heu(______);
+$lum bool				3sec
+$rad bool				3sec
+$vol bool				3sec
+$lux lux				3sec
+$tem c° 				3sec
+$hum %					3sec
+$con w					3sec
+$air Niveau de 1-10 			3sec
+$heu min sec				3sec
+$lum_rad_vol_tem__hum__lux__air__con__heu______;
