@@ -63,7 +63,7 @@ V1.1.2 Updates for Arduino 1.6.4 5/2015
 // Your sketch must #include this library, and the Wire library.
 // (Wire is a standard library included with Arduino.):
 
-#include <SFE_BMP180.h>
+#include "SFE_BMP180.h"
 #include <Wire.h>
 
 // You will need to create an SFE_BMP180 object, here called "pressure":
