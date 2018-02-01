@@ -2,7 +2,7 @@ Problèmes rencontrées : Difficulté rencontré à rentrer en mode AT et insensible 
 
 1er module configuré : Gestion mdp : 4567
 +ADDR:98d3:36:80f25c
-vitesse : 9600baud
+           vitesse : 9600baud
 
 2nd module configuré : Web     mdp : 8901
 +ADDR:98d3:32:10c2a1

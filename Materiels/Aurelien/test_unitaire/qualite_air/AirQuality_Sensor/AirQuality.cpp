@@ -44,13 +44,9 @@ void AirQuality::init(int pin)
     _pin=pin;
     pinMode(_pin,INPUT);
     unsigned char i=0;
-    delay(3000);
-    Serial.println("sys_starting...");
-    delay(20000);//200000
+    delay(2000);//200000
     init_voltage=analogRead(_pin);
 
-    Serial.println("The init voltage is ...");
-    Serial.println(init_voltage);
     while(init_voltage)
     {
         if(init_voltage<798 && init_voltage>10)// the init voltage is ok
@@ -58,7 +54,6 @@ void AirQuality::init(int pin)
             first_vol=analogRead(A0);//initialize first value
             last_vol=first_vol;
             vol_standard=last_vol;
-            Serial.println("Sensor ready.");
             error=false;;
             break;
         }
@@ -97,9 +92,7 @@ int AirQuality::slope(void)
             return 0;	
         }
     	else if((first_vol-last_vol>400&&first_vol<700)||first_vol-vol_standard>150)
-        {	
-            Serial.print("sensor_value:");		
-            Serial.print(first_vol);      		
+        {	     		
             Serial.println("\t High pollution!");		
             timer_index=0;	
             avgVoltage();
@@ -108,9 +101,7 @@ int AirQuality::slope(void)
         }
     	else if((first_vol-last_vol>200&&first_vol<700)||first_vol-vol_standard>50)
         {
-            //Serial.println(first_vol-last_vol);
-            Serial.print("sensor_value:");
-            Serial.print(first_vol);      		
+            Serial.println(first_vol-last_vol);    		
             Serial.println("\t Low pollution!");		
             timer_index=0;
             avgVoltage();
@@ -119,8 +110,6 @@ int AirQuality::slope(void)
     	else
         {
             avgVoltage();	
-            Serial.print("sensor_value:");
-            Serial.print(first_vol);
             Serial.println("\t Air fresh");
             timer_index=0;
             return 3;
