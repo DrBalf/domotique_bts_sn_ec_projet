@@ -1,27 +1,25 @@
-#define PIR_MOTION_SENSOR 2//Use pin 2 to receive the signal from the module 
+#define CAPTEUR_MOUVEMENT 2
+#define POTEN_A 3
+#define POTEN_B 4
 
 void setup()
 {
   Serial.begin(9600);
-  pinMode(PIR_MOTION_SENSOR, INPUT);
+  pinMode(CAPTEUR_MOUVEMENT, INPUT);
 }
 
 void loop() 
 {
-  if(isPeopleDetected()== true){
+  if(mouvementDetecte()== true){
     Serial.println("Mouvement detecte !");
-    delay(1000);
-  }
-  else{
-    Serial.println("Aucun mouvement");
-    delay(1000);
+    delay(2000);
   }
 }
 
-boolean isPeopleDetected()
+boolean mouvementDetecte()
 {
-  int sensorValue = digitalRead(PIR_MOTION_SENSOR);
-  if(sensorValue == HIGH)
+  int valeurCapteur = digitalRead(CAPTEUR_MOUVEMENT);
+  if(valeurCapteur == HIGH)
   {
     return true;
   }

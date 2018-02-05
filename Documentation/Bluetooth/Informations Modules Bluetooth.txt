@@ -1,11 +1,11 @@
 Problèmes rencontrées : Difficulté rencontré à rentrer en mode AT et insensible à la casse.
 
 1er module configuré : Gestion mdp : 4567
-+ADDR:98d3:36:80f25c
-           vitesse : 9600baud
++ADDR:98d3:32:10c2a1	+IAC:9e8b33	+INQM:1,2,12
+vitesse : 9600baud
 
 2nd module configuré : Web     mdp : 8901
-+ADDR:98d3:32:10c2a1
++ADDR:98d3:31:300e42
 vitesse : 9600baud
 
 /!\: Aucune indication au niveau de la led pour le mode AT.
@@ -18,6 +18,6 @@ AT+ADDR : see default address				Fonctionne
 AT+VERSION : See version				Fonctionne
 AT+UART : See baudrate					Fonctionne
 AT+ROLE: See role of bt module(1=master/0=slave)	Affiche le role et " AT+ROLE= " permet de changer le role
-AT+RESET : Reset and exit AT mode			?
-AT+ORGL : Restore factory settings			?
+AT+RESET : Reset and exit AT mode			Non testé
+AT+ORGL : Restore factory settings			Non testé
 AT+PSWD: see default password				Affiche le mot de passe et " AT+PSWD= " permet de changer le mot de passe.
