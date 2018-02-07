@@ -53,7 +53,7 @@ void setup () {
 #ifndef ESP8266
   while (!Serial); // for Leonardo/Micro/Zero
 #endif
-    Serial.begin(57600);
+    Serial.begin(9600);
     
     DateTime dt0 (0, 1, 1, 0, 0, 0);
     showDate("dt0", dt0);

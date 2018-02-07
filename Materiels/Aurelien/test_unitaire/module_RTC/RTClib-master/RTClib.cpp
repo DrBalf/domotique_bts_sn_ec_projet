@@ -176,7 +176,7 @@ DateTime::DateTime (const __FlashStringHelper* date, const __FlashStringHelper* 
 
 uint8_t DateTime::dayOfTheWeek() const {    
     uint16_t day = date2days(yOff, m, d);
-    return (day + 6) % 7; // Jan 1, 2000 is a Saturday, i.e. returns 6
+    return ((day + 6) % 7)-1; // Jan 1, 2000 is a Saturday, i.e. returns 6
 }
 
 uint32_t DateTime::unixtime(void) const {

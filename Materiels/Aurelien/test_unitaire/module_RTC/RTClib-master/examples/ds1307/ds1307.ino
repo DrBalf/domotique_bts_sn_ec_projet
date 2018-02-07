@@ -4,12 +4,12 @@
 
 RTC_DS1307 rtc;
 
-char daysOfTheWeek[7][12] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+char daysOfTheWeek[7][12] = {"Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"};
 
 void setup () {
   while (!Serial); // for Leonardo/Micro/Zero
 
-  Serial.begin(57600);
+  Serial.begin(9600);
   if (! rtc.begin()) {
     Serial.println("Couldn't find RTC");
     while (1);
@@ -23,7 +23,7 @@ void setup () {
     // January 21, 2014 at 3am you would call:
     rtc.adjust(DateTime(2018, 02, 1, 11, 43, 0));
   }
-  rtc.adjust(DateTime(2018, 02, 1, 11, 43, 0));
+  rtc.adjust(DateTime(2018, 02, 07, 17, 39, 0));
 }
 
 void loop () {
