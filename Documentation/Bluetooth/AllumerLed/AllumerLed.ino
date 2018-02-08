@@ -1,35 +1,28 @@
-int ledPin = 13;                    
-String readString;                  
-int message = 1;
+#define ledPin 13   
+                            
 /*Effectue le programme une seule fois*/
 void setup() {
-Serial1.begin(9600);               
-pinMode(ledPin, OUTPUT);       
+  Serial1.begin(9600);               
+  pinMode(ledPin, OUTPUT);    
 }
 
 /*Effectue le programme en boucle*/
 void loop() {
-     
-while (Serial1.available()) {     
-    delay(3);                   
-   Serial1.println("False\r");
-   delay(2);
-   Serial1.flush();
-    char c = Serial1.read();
-        readString += c;
-        
+    short c = -1;
+    String etatLampe;  
+    
+    while (Serial1.available()) {       
+        c = Serial1.read();                
     }
-    if (readString.length() >0) {
-        Serial1.println(readString);
-        if (readString == "onLum")
-        {
-            digitalWrite(ledPin, HIGH);
-        }
-        if (readString == "offLum")
-        {
-            digitalWrite(ledPin, LOW);
-        }
-        readString="";
+    
+    if (c == 1){
+        digitalWrite(ledPin, HIGH);
+        etatLampe="Eteinte";
+        Serial1.print(etatLampe);
     }
-
+    if (c == 0){
+        digitalWrite(ledPin, LOW);
+        etatLampe="Allumee";
+        Serial1.print(etatLampe);
+    }
 }

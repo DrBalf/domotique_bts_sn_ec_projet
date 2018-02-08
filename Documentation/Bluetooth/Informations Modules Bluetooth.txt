@@ -21,3 +21,12 @@ AT+ROLE: See role of bt module(1=master/0=slave)	Affiche le role et " AT+ROLE= "
 AT+RESET : Reset and exit AT mode			Non testé
 AT+ORGL : Restore factory settings			Non testé
 AT+PSWD: see default password				Affiche le mot de passe et " AT+PSWD= " permet de changer le mot de passe.
+
+Semaine 1 [Lundi 8 Janvier au vendredi 12 Janvier] : Recherche sur notre projet en commun et commencement des analyses fonctionnelles. <- En équipe
+Semaine 2 [Lundi 15 Janvier au vendredi 19 Janvier] : Finition des analyses fonctionnelles et passage à l'oral devant Mr.Pisak, puis Mr.Beriouche. <- En équipe
+Semaine 3 [Lundi 22 Janvier au vendredi 26 Janvier] : Création du compte MIT APP INVENTOR 2, création d'un croquis de l'application et début de l'apparence sur
+						      MIT APP INVENTOR 2. Finition de l'apparence et début des blocks sur MIT APP INVENTOR 2.<- Autonome
+Semaine 4 [Lundi 29 Janvier au vendredi 2 Février] : Module Bluetooth HC-O5 BC417, application des commandes AT avec le maître et configuration du module bluetooth
+						     avec les commandes AT et allumer une LEd a distance avec la tablette.
+Semaine 5 [Lundi 5 Janvier au vendredi 9 Février] : Confirmation de l'envoie des données de la tablette au module, essaie de reception de données. Reconfiguration des
+						    modules Bluetooth avec les commandes AT. Amélioration de l'application.
