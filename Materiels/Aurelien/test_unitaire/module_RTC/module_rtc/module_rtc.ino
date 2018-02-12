@@ -8,13 +8,13 @@ char daysOfTheWeek[7][12] = {"Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", 
 void setup() {
   Serial.begin(9600);
   rtc.begin();
-  rtc.isrunning();
-  rtc.adjust(DateTime(2018, 02, 07, 17, 45, 0));
+  rtc.isrunning();  
 }
 
 void loop() {
    DateTime now = rtc.now();
-      
+
+      //affichage de la date 
       Serial.print(now.year(), DEC);
       Serial.print('/');
       Serial.print(now.month(), DEC);
@@ -23,6 +23,7 @@ void loop() {
       Serial.print(" (");
       Serial.print(daysOfTheWeek[now.dayOfTheWeek()]);
       Serial.print(") ");
+      //affichage de l'heure
       Serial.print(now.hour(), DEC);
       Serial.print(':');
       Serial.print(now.minute(), DEC);

@@ -16,13 +16,13 @@ void loop(void)
   sensors_event_t event;
   tsl.getEvent(&event);
  
-  if (event.light)
-  {
-    Serial.print(event.light); Serial.println(" lux");
+  if(event.light){
+    Serial.print(event.light); Serial.println(" lux");    //Appel de la méthode qui renvoie la valeur en lux
   }
-  else
-  {
+  else{
     Serial.println("Trop sombre");
   }
   delay(1000);
 }
+
+
