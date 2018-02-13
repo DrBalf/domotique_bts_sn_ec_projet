@@ -1,6 +1,4 @@
 #define CAPTEUR_MOUVEMENT 2
-#define POTEN_A 3
-#define POTEN_B 4
 
 void setup()
 {
@@ -28,3 +26,5 @@ boolean mouvementDetecte()
     return false;
   }
 }
+
+

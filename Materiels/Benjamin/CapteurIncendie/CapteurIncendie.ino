@@ -1,4 +1,4 @@
-#define CAPTEUR_INCENDIE 3//Use pin 2 to receive the signal from the module 
+#define CAPTEUR_INCENDIE 2
 
 void setup()
 {
@@ -14,7 +14,7 @@ void loop()
   }
   else{
     Serial.println("Aucune fumee");
-    delay(1000);;
+    delay(1000);
   }
 }
 
@@ -30,3 +30,5 @@ boolean isFumeDetected()
     return false;
   }
 }
+
+
