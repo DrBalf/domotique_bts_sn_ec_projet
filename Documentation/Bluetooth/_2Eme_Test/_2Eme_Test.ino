@@ -8,6 +8,8 @@ void setup()
   Bluetooth.begin(9600);
   pinMode(9, OUTPUT);  // this pin will pull the HC-05 pin 34 (key pin) HIGH to switch module to AT mode
   digitalWrite(9, HIGH);
+   pinMode(8, OUTPUT);  // this pin will pull the HC-05 pin 34 (key pin) HIGH to switch module to AT mode
+    digitalWrite(8, HIGH);
 }
  
 void loop()

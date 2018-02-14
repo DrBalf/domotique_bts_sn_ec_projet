@@ -1,0 +1,2 @@
+pour une acuisition d'un changement d'état (haut/bas):	-Appuyer sur le bouton "ACQUIRE" a gauche de "RUN/STOP" 
+							-Puis passez en mode "Pic" en appuyant sur "F1"
