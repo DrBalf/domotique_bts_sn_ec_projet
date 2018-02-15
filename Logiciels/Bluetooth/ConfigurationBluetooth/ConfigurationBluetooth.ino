@@ -7,13 +7,15 @@ void setup()
   Serial.print("Enter AT commands:");
   Bluetooth.begin(9600);
   pinMode(9, OUTPUT);  // this pin will pull the HC-05 pin 34 (key pin) HIGH to switch module to AT mode
-  digitalWrite(9, HIGH);
+  digitalWrite(9,HIGH);
 }
  
 void loop()
 {
  
   // Read from HC-05 and send it to Arduino Serial Monitor
+
+   digitalWrite(9,LOW);
   if (Bluetooth.available())
   {
     Serial.write(Bluetooth.read());
