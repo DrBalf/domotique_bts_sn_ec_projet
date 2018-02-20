@@ -15,7 +15,7 @@ void loop()
  
   // Read from HC-05 and send it to Arduino Serial Monitor
 
-   digitalWrite(9,LOW);
+
   if (Bluetooth.available())
   {
     Serial.write(Bluetooth.read());

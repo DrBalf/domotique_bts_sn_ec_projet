@@ -1,16 +1,14 @@
 void setup() {
-  pinMode(2, OUTPUT);
-  pinMode(3, INPUT);
-  pinMode(4, INPUT);
-  pinMode(5, OUTPUT);
+  Serial.begin(9600);
+  pinMode(2, INPUT);
 }
 
 void loop() {
-  if(digitalRead(3)==LOW){
-    digitalWrite(2, HIGH);
+  if(digitalRead(2)==LOW){
+    Serial.println("les volets sont fermé");
   }
-  
-  if(digitalRead(4)==LOW){
-    digitalWrite(2, LOW);
+
+  if(digitalRead(2)==HIGH){
+    Serial.println("les volets sont ouvert");
   }
 }

@@ -3,7 +3,6 @@
 
 #define CAPTEUR_INCENDIE 2
 #define CAPTEUR_MOUVEMENT 3
-#define INTERRUPTEUR 4
 
 bool isFumeDetected()
 {
