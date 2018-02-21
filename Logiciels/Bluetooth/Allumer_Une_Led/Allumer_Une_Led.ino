@@ -1,13 +1,14 @@
-#include <SoftwareSerial.h>
+//#include <SoftwareSerial.h>
 
-SoftwareSerial Bluetooth(2,3); // RX // TX
+// SoftwareSerial Serial1(2,3); // RX // TX
 
 #define ledPin 13   
                             
 /*Effectue le programme une seule fois*/
 void setup() {
-  Bluetooth.begin(9600);               
+  Serial1.begin(9600);               
   pinMode(ledPin, OUTPUT);
+  //Serial1.print("Hello");
 }
 
 /*Effectue le programme en boucle*/
@@ -15,18 +16,18 @@ void loop() {
     short c = -1;
     String etatLampe;  
     
-    while (Bluetooth.available()) {       
-         c = Bluetooth.read();                
+    while (Serial1.available()) {       
+         c = Serial1.read();                
     }
     
     if (c == 1){
         digitalWrite(ledPin, HIGH);
         etatLampe="Eteinte";
-        Bluetooth.print(etatLampe);
+        Serial1.print(etatLampe);
     }
     if (c == 0){
         digitalWrite(ledPin, LOW);
         etatLampe="Allumee";
-        Bluetooth.print(etatLampe);
+        Serial1.print(etatLampe);
     }
 }

@@ -1,5 +1,5 @@
-int cmdUp = 2;
-int cmdDown = 3;
+int cmdUp = 6;
+int cmdDown = 7;
 int switchUp = 4;
 int switchDown = 5;
 char valeur;
@@ -15,21 +15,22 @@ void setup() {
 void loop() {
     
     if (Serial.available() > 0) {
+      
     valeur = Serial.read();
-    if (valeur=='1'){
-      while(digitalRead(switchUp)==LOW){
-         Serial.println("Le volet monte");
-         digitalWrite(cmdUp,HIGH);
-      }
-      
-    }
-    if(valeur=='2'){
-      while(digitalRead(switchDown)==LOW){
-        Serial.println("Le volet descend");
-        digitalWrite(cmdDown,HIGH);
-      }
-    }
-      
     
+      if (valeur=='1'){
+        while(digitalRead(switchUp)==HIGH){
+           digitalWrite(cmdUp,HIGH);
+        }
+        digitalWrite(cmdUp,LOW);        
+      }
+      
+      if(valeur=='2'){
+        while(digitalRead(switchDown)==HIGH){
+          digitalWrite(cmdDown,HIGH);
+        }
+        digitalWrite(cmdDown,LOW);
+      }
+          
     }
-  }
+}

@@ -1,10 +1,13 @@
-int interuptePinCompteur = 2;
-bool flag=0;
+int interruptePinCompteur = 2;
 void setup() {
   Serial.begin(9600);
-  pinMode(interuptePinCompteur, INPUT_PULLUP);
-  pinMode(3,OUTPUT);
-  attachInterrupt(digitalPinToInterrupt(interuptePinCompteur), interuption, LOW);
+  //INPUT_PULLUP nous sers a utiliser la résistance de pull_up lier à la broche 
+  pinMode(interruptePinCompteur, INPUT_PULLUP);
+  pinMode(3, OUTPUT);
+  //déclaration d'une interruption le premier parramètre est la broche a utiliser
+  //le deuxième paramètre est est le nom de la fonction 
+  //le troisième paramètre est l'état de la pate qui déclenchera l'interruption. 
+  attachInterrupt(digitalPinToInterrupt(interruptePinCompteur), interruption, LOW);
 }
 
 void loop() {
@@ -12,19 +15,15 @@ void loop() {
 
 }
 
-void interuption(){
+void interruption(){
+  //le delay nous permet de ne pas lancer l'interruption 
+  //en cas de perturbation electrique
   delay(50);
-  if (digitalRead(interuptePinCompteur)==0){
+  //on vérifie l'état de la broche
+  if (digitalRead(interruptePinCompteur)==0){
     Serial.println("bonjour");
-    if(flag){
-      digitalWrite(3,HIGH);
-      flag=0;
-    }
-    else{
-      digitalWrite(3,LOW);
-      flag=1;
-    }
-    while(digitalRead(interuptePinCompteur)!=1);  
+    //on attend que la broche repasse a l'état haut
+    while(digitalRead(interruptePinCompteur)!=1);  
   }   
 }
 

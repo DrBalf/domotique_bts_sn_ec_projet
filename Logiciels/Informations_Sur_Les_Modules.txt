@@ -1,0 +1,36 @@
+
+[1er module configuré]:
+
+WEB - 	vitesse par défaut : 38400 Baud
+	vitesse changé: 9600 Baud
+	Mot de passe : 7416
+	+ADDR:98d3:32:10c2a1
+
+[2nd module configuré]:
+
+APPLICATION - 	vitesse par défaut : 38400 Baud
+		vitesse changé : 9600 Baud
+		Mot de passe : 9634
+		+ADDR:98d3:36:80f25c	
+
+
+[3ème module configuré]:
+
+TABLETTE - 	Mot de passe : 9634
+		+ADDR:8455:a5:5462b6
+
+[4ème module configuré (plus tard donné par Mr Bériouche) ]:
+
+GESTION - 	vitesse par défaut : 38400 Baud
+		vitesse changé : 9600 Baud
+		Mot de passe : 7416
+		+ADDR:98d3:33:811ee4
+
+[4ème module configuré (change le 21/02/2018 pour un module identique au deux premiers) ]:
+
+GESTION - 	vitesse par défaut : 38400 Baud
+		vitesse changé : 9600 Baud
+		Mot de passe : 7416
+		+ADDR:98d3:31:fc1f4e
+
+Un légère impression de boulgoure au niveau du clignotement de la led.

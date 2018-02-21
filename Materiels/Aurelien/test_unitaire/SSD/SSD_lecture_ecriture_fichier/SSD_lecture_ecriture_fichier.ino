@@ -6,12 +6,12 @@ SdFat sd;
 uint8_t buf[BUFFER_SIZE];
 
 void setup() {
-  String bonjour="bonjour ! NICO EST SALEE COMME LE DEMON !!!!!!!!!!";
+  String bonjour="bonjour !";
   int n=0;
+  
   String myString=""; 
   SdFile fichier;
-  Serial.begin(9600);
-  
+    
   //init
   Serial.begin(9600); 
   Serial.println("init SD");
@@ -30,8 +30,9 @@ void setup() {
   
   //liste du contenue de la carte
   sd.ls("/", LS_SIZE|LS_R);
+  
   //lecture
-   if(!fichier.open(&sd, "toto.txt", O_READ)){
+   if(!fichier.open(&sd, "Compteur_Elec.txt", O_READ)){
     Serial.println("erreur");
     return;
   }
