@@ -21,18 +21,17 @@ void setup() {
   }
 
  //ecriture
-  if(!fichier.open(&sd, "toto.txt", O_RDWR|O_TRUNC|O_AT_END|O_SYNC)){
+  if(!fichier.open(&sd, "Compteur_Elec_Energie.txt", O_RDWR|O_TRUNC|O_AT_END|O_SYNC)){
     Serial.println("Erreur");
     return;
   }
-  fichier.println(bonjour);
   fichier.close();
   
   //liste du contenue de la carte
   sd.ls("/", LS_SIZE|LS_R);
   
   //lecture
-   if(!fichier.open(&sd, "Compteur_Elec.txt", O_READ)){
+   if(!fichier.open(&sd, "Compteur_Elec_Energie.txt", O_READ)){
     Serial.println("erreur");
     return;
   }
