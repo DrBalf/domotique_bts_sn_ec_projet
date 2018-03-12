@@ -1,11 +1,16 @@
-/*C'est validé*/
+
 void setup()
 {
+  Serial.begin(9600);
+  Serial.print("Enter AT commands:");
+  Serial2.begin(9600);
   Serial1.begin(9600);
+  pinMode(9, OUTPUT);  // this pin will pull the HC-05 pin 34 (key pin) HIGH to switch module to AT mode
+  digitalWrite(9, HIGH);
 }
  
 void loop()
 {
- Serial1.print("Lum 17,Lux 16,Vol1 Ouvert,Vol2 Fermer,Rad 12,Tem 22,Con 65,Qua 10,Tau 35,Der 22/02/18,"); 
-  delay(300);
+   Serial1.print("lum Eteinte$lux 16$vol1 Ouvert$vol2 Fermer$rad allumé$tem 22$con 65$air 10$hum 20$der 12/03/2018$"); 
+   delay(300);
 }
