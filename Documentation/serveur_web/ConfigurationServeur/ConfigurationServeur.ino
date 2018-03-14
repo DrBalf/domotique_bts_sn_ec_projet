@@ -8,17 +8,16 @@ EthernetServer serveur(80); // déclare l'objet serveur au port d'écoute 80
 
 void setup() {
   Serial.begin (9600); //initialisation de communication série
-    // no point in carrying on, so do nothing forevermore:
     if (Ethernet.begin(mac) == 0) {
-    Serial.println("Failed to configure Ethernet using DHCP");
-     Ethernet.begin (mac, ip); //initialisatio de la communication Ethernet
+    Serial.println("Echec de la configuration Ethernet avec le DHCP");
+     Ethernet.begin (mac, ip); //initialisation de la communication Ethernet
     Serial.print("\nLe serveur est sur l'adresse : ");
     }
      Serial.println(Ethernet.localIP()); //on affiche l'adresse IP de la connexion
    serveur.begin(); // démarre l'écoute
-
 }
 void loop() {
+ 
   EthernetClient client = serveur.available(); //on écoute le port
   if (client) { //si client connecté
     Serial.println("Client en ligne\n"); //on le dit...

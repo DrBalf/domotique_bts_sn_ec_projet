@@ -1,46 +1,30 @@
-#include <Wire.h>
+#include "capteur.h"
 #include <HIH6130.h>
 #include<AirQuality.h>
-#include"Arduino.h"
 
-//Déclaration des variables globale pour la capteur de qualité d'air
+HIH6130 rht(0x27);
+
 AirQuality airqualitysensor;
 int current_quality =-1;
 
-// L'adresse du capteur HIH6130 est 0x27
-HIH6130 rht(0x27);
-
-//Déclaration des variables globale pour le relai
-int pin_relai = 2;
-char valeur;
-
-void setup(){
-
-  Serial.begin(9600);
-  
-  //setup capteur HIH6130
-  rht.begin();
-  
-  //setup capteur qualité air
+void initCapteur(){
+  Serial.println("initialisation des capteurs...");
+  rht.begin(); 
   airqualitysensor.init(A0);
-
-  //setup relai
-  pinMode(pin_relai, OUTPUT);
-  digitalWrite(pin_relai,HIGH);
-  Serial.println("0 = allumer radiateur");
-  Serial.println("1 = eteindre radiateur");
+  delay (5000);
 }
 
-void loop(){
-
-  //patie température/humidité
+double temperature(){
   rht.readRHT();
-  Serial.print(rht.humidity);
-  Serial.println ("%");
-  Serial.print(rht.temperature);
-  Serial.println (" Celsius");
+  return rht.temperature;  
+}
 
-  //partie qualité d'air
+double humidite(){
+  rht.readRHT();
+  return rht.humidity;
+}
+
+int qualiteAir(){
   current_quality=airqualitysensor.slope();
   if (current_quality >= 0)// if a valid data returned.
   {
@@ -53,28 +37,7 @@ void loop(){
       else if (current_quality ==3)
           Serial.println("Air pure");
   }
-
-
- //partie relai 
- if (Serial.available() > 0) {
-    valeur = Serial.read();
-    Serial.print("Radiateur = ");
-    if (valeur=='1'){
-      digitalWrite(pin_relai,HIGH);
-      Serial.println("etteind");  
-    }
-    else{
-      digitalWrite(pin_relai,LOW);
-      Serial.println("allumer");   
-    }
- }   
-
-  Serial.println("");  
-  delay(2000);
-
-  
 }
-
 
 ISR(TIMER1_OVF_vect) //timer
 {

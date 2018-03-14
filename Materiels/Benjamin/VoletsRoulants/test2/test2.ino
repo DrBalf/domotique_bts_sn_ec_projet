@@ -24,18 +24,18 @@ void loop() {
   
   sensors_event_t event;
   tsl.getEvent(&event);    
-  if((event.light)>25.00){
-     while(digitalRead(switchUp)==HIGH){
-       digitalWrite(cmdUp,HIGH);
-       digitalWrite(ledPin, LOW);
+  if((event.light)>25.00){                //si la luminosité est supérieure à 25 lux
+     while(digitalRead(switchUp)==HIGH){  //tant que le volet n'est pas en fin de course
+       digitalWrite(cmdUp,HIGH);          //le volet monte
+       digitalWrite(ledPin, LOW);         //la lumière s'éteint
      }
      digitalWrite(cmdUp,LOW);        
   }
       
-  if((event.light)<25.00){
-     while(digitalRead(switchDown)==HIGH){
-        digitalWrite(cmdDown,HIGH);
-        digitalWrite(ledPin, HIGH);
+  if((event.light)<25.00){                  //si la luminosité est inférieur à 25 lux
+     while(digitalRead(switchDown)==HIGH){  //tant que le volet n'est pas en fin de course
+        digitalWrite(cmdDown,HIGH);         //le volet descend
+        digitalWrite(ledPin, HIGH);         //la lumière s'allume
      }
      digitalWrite(cmdDown,LOW);
   }      

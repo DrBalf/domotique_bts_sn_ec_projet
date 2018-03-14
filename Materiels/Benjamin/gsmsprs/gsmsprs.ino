@@ -1,12 +1,13 @@
 #include <SoftwareSerial.h>
 
-SoftwareSerial gsm(2, 3);
+SoftwareSerial mySerial (2, 3);
 
 void setup(){
-  gsm.begin(9600);
-  gsm.print("AT\r\n");
+  Serial.begin(9600);
+  mySerial.begin(9600);
+  mySerial.print("AT");
 }
-
 
 void loop(){ 
 }
+

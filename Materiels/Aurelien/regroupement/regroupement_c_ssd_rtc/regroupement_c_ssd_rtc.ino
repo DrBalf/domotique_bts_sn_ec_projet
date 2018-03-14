@@ -87,13 +87,3 @@ void interruption(){
     while(digitalRead(interruptePinCompteur)!=1);  
   }
 }
-
-
-
-
-
-
-
-    
-
-
