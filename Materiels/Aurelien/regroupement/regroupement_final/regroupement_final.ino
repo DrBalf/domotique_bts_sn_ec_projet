@@ -3,9 +3,10 @@
 #include "horodatage.h"
 #include "affichage.h"
 
-int interruptePinCompteur = 3; //Variable Compteur
+unsigned short interruptePinCompteur = 3; //Variable Compteur
 
 unsigned short flagCompteurEnergie=0;
+
 
 void setup(){
   Serial.begin(9600);
@@ -16,29 +17,31 @@ void setup(){
 
   //Setup Compteur interruption
   pinMode(interruptePinCompteur, INPUT_PULLUP);                             
-  attachInterrupt(digitalPinToInterrupt(interruptePinCompteur), interruption, LOW);
-  
-
+  attachInterrupt(digitalPinToInterrupt(interruptePinCompteur), interruptionCompteur, LOW);
 }
 
 void loop(){
-  affichageTempHumi(temperature(), humidite());
-  Serial.print("Qualite de l'air : ");
-  qualiteAir();
+  static int tempo=0;
+  if (tempo==500 || tempo==1000){
+    affichageTempHumi(temperature(), humidite(), etatRelai()); 
+  }
+  if (tempo==1000){
+    affichageQAirRad(qualiteAir());
+    tempo=0; 
+  }
   relai();
 
   if (flagCompteurEnergie==1){
         Serial.print ("Horodatage : ");
         horodatage();
         flagCompteurEnergie=0;
-  }  
-
-  Serial.println("");  
-  delay(3000);   
+  }
+  tempo++;
+  delay(10);
 }
 
 
-void interruption(){
+void interruptionCompteur(){
 
   delay(50);
   if (digitalRead(interruptePinCompteur)==0){
@@ -46,4 +49,5 @@ void interruption(){
     while(digitalRead(interruptePinCompteur)!=1);  
   }
 }
+
 

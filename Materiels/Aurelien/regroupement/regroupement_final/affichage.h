@@ -1,8 +1,8 @@
-#ifndef CAPTEUR_H
-#define CAPTEUR_H
+#ifndef AFFICHAGE_H
+#define AFFICHAGE_H
 
-void affichageTempHumi(double temperature, double humidite);
+void affichageTempHumi(double, double);
 
-void affichageQAirRad (int qualiteAir, bool radiateur);
+void affichageQAirRad (int, bool);
 
 #endif 

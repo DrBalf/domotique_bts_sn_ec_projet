@@ -37,7 +37,7 @@ void horodatage(){
       SdFile fichier; 
   
       //ecriture dans le fichier txt Compteur_Elec dans la SD
-      if(!fichier.open(&sd, "Compteur_Elec_Energie.txt", O_RDWR|O_TRUNC|O_AT_END|O_SYNC)){
+      if(!fichier.open(&sd, "Compteur_Energie.txt", O_RDWR|O_TRUNC|O_AT_END|O_SYNC)){
         Serial.println("Erreur");
         return;
       }
@@ -45,24 +45,24 @@ void horodatage(){
       fichier.print("KWh ");      
       DateTime now = rtc.now();
       //affichage de la date 
-      fichier.print(now.year(), DEC);
+      fichier.print(now.year());
       fichier.print('/');
-      fichier.print(now.month(), DEC);
+      fichier.print(now.month());
       fichier.print('/');
-      fichier.print(now.day(), DEC);
+      fichier.print(now.day());
       fichier.print(" ");
       //affichage de l'heure
-      fichier.print(now.hour(), DEC);
+      fichier.print(now.hour());
       fichier.print(':');
-      fichier.print(now.minute(), DEC);
+      fichier.print(now.minute());
       fichier.print(':');
-      fichier.println(now.second(), DEC);
+      fichier.println(now.second());
       fichier.close();
     
       //sd.ls("/", LS_SIZE|LS_R);
     
       //lecture du contenue du fichier txt Compteur_Elec dans la SD
-      if(!fichier.open(&sd, "Compteur_Elec_Energie.txt", O_READ)){
+      if(!fichier.open(&sd, "Compteur_Energie.txt", O_READ)){
         Serial.println("erreur");
         return;
       }

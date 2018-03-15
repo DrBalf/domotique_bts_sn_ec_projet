@@ -13,17 +13,17 @@ void initrelai(){
 void relai(){
    if (Serial.available() > 0) {
     valeur = Serial.read();
-    Serial.print("Radiateur = ");
     if (valeur=='1'){
-      digitalWrite(pin_relai,HIGH);
-      Serial.println("etteind");  
+      digitalWrite(pin_relai,HIGH); 
     }
     else{
       digitalWrite(pin_relai,LOW);
-      Serial.println("allumer");   
     }
  }
- bool val = digitalRead(pin_relai);
- return val; 
+}
+
+bool etatRelai(){
+  bool val = digitalRead(pin_relai);
+  return val;
 }
 

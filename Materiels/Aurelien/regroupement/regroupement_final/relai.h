@@ -3,6 +3,8 @@
 
 void initrelai(void);
 
-void relai (void);
+void relai ();
+
+bool etatRelai (void);
 
 #endif 

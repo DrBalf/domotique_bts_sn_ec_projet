@@ -26,17 +26,7 @@ double humidite(){
 
 int qualiteAir(){
   current_quality=airqualitysensor.slope();
-  if (current_quality >= 0)// if a valid data returned.
-  {
-      if (current_quality==0)
-          Serial.println("Pollution importante !!");
-      else if (current_quality==1)
-          Serial.println("Pollution");
-      else if (current_quality==2)
-          Serial.println("Faible pollution");
-      else if (current_quality ==3)
-          Serial.println("Air pure");
-  }
+  return current_quality;
 }
 
 ISR(TIMER1_OVF_vect) //timer
