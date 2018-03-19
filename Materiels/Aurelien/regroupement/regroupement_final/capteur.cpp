@@ -12,6 +12,7 @@ void initCapteur(){
   rht.begin(); 
   airqualitysensor.init(A0);
   delay (5000);
+  Serial.println("Capteurs initialises.");  
 }
 
 double temperature(){

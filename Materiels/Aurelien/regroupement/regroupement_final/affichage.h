@@ -1,8 +1,8 @@
 #ifndef AFFICHAGE_H
 #define AFFICHAGE_H
 
-void affichageTempHumi(double, double);
+void affichage(double, double, bool);
 
-void affichageQAirRad (int, bool);
+void affichage(int);
 
 #endif 

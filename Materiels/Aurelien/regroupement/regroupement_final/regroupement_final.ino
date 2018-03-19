@@ -2,11 +2,13 @@
 #include "relai.h"
 #include "horodatage.h"
 #include "affichage.h"
+#include "maison.h"
+
+Maison maison;
 
 unsigned short interruptePinCompteur = 3; //Variable Compteur
 
 unsigned short flagCompteurEnergie=0;
-
 
 void setup(){
   Serial.begin(9600);
@@ -23,16 +25,19 @@ void setup(){
 void loop(){
   static int tempo=0;
   if (tempo==500 || tempo==1000){
-    affichageTempHumi(temperature(), humidite(), etatRelai()); 
+    maison.temperature=temperature();
+    maison.humidite=humidite();
+    maison.radiateur=etatRelai();
+    affichage(maison.temperature, maison.humidite, maison.radiateur);    
   }
   if (tempo==1000){
-    affichageQAirRad(qualiteAir());
+    maison.qualiteAir=qualiteAir();
+    affichage(maison.qualiteAir);
     tempo=0; 
   }
   relai();
 
   if (flagCompteurEnergie==1){
-        Serial.print ("Horodatage : ");
         horodatage();
         flagCompteurEnergie=0;
   }

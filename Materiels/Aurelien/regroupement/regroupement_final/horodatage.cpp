@@ -1,7 +1,8 @@
 #include <SPI.h>          //
 #include <SdFat.h>        //Bibliothèque carte SD   
 #include <RTClib.h>       //Bibliothèque RTC
-#include "horodatage.h" 
+#include "horodatage.h"
+#include "maison.h" 
 /*Le module SD focntion en liason SPI et les pin SPI sont différente en fonction de la carte
 carte Arduino utilisé. cf : https://www.arduino.cc/en/Reference/SPI */ 
 #define BUFFER_SIZE 250   //déffinition de la taille du buffer.
@@ -9,7 +10,7 @@ carte Arduino utilisé. cf : https://www.arduino.cc/en/Reference/SPI */
 
 SdFat sd;                 //
 uint8_t buf[BUFFER_SIZE]; //Variable SD
-float pulsion = 0.1;  
+float pulsion = 0.0;  
 RTC_DS1307 rtc;           //Variable RTC 
 
 void initHorodatage(){
@@ -35,12 +36,13 @@ void initRTC(){
 void horodatage(){
 
       SdFile fichier; 
-  
+      String dateHeure="0";
       //ecriture dans le fichier txt Compteur_Elec dans la SD
       if(!fichier.open(&sd, "Compteur_Energie.txt", O_RDWR|O_TRUNC|O_AT_END|O_SYNC)){
         Serial.println("Erreur");
         return;
       }
+      pulsion=pulsion+0.1;      
       fichier.print(pulsion);
       fichier.print("KWh ");      
       DateTime now = rtc.now();
@@ -73,6 +75,7 @@ void horodatage(){
       Serial.print(myString);
       Serial.println("\"");
       fichier.close();
-      pulsion=pulsion+0.1;
+ 
+      
 }
 

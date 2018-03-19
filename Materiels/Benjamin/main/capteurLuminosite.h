@@ -1,0 +1,1 @@
+bool luminosite(void);

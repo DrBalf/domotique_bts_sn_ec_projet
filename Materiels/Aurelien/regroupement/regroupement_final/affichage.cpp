@@ -1,7 +1,8 @@
 #include "affichage.h"
 #include"Arduino.h"
 
-void affichage1 (double temperature, double humidite, bool radiateur){
+void affichage (double temperature, double humidite, bool radiateur){
+    Serial.println("----------------------------");  
     Serial.print("Temperature : ");
     Serial.print(temperature);
     Serial.println(" C");
@@ -15,10 +16,12 @@ void affichage1 (double temperature, double humidite, bool radiateur){
     }
     else if (radiateur==0){
       Serial.println("Allume");
-    }   
+    }
+    Serial.println("----------------------------");   
 }
 
-void affichage2 (int qualiteAir){
+void affichage (int qualiteAir){
+  Serial.println("----------------------------");  
   Serial.print("Qualite de l'air : ");
   if (qualiteAir >= 0)// if a valid data returned.
   {
@@ -30,6 +33,7 @@ void affichage2 (int qualiteAir){
           Serial.println("Faible pollution");
       else if (qualiteAir==3)
           Serial.println("Air pure");
-  } 
+  }
+  Serial.println("----------------------------");   
 }
 
