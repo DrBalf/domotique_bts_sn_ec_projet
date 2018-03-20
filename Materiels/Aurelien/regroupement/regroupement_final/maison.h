@@ -11,11 +11,19 @@ public:
     bool incendie=false;
     bool mouvement=false;
     float luminosite;
+    short temperatureUtilisateur;
+    double temperatureChauffDefault=20;
     double temperature; //lore
     char qualiteAir; //lore
     double humidite; //lore
     float consomation; //lore
-    String dateHeure; //lore
+    //lore
+    int annee;
+    int jour;    
+    int mois;    
+    int heure;    
+    int minutes;    
+    int seconde;
     
 private:
      

@@ -11,10 +11,10 @@ void affichage (double temperature, double humidite, bool radiateur){
     Serial.println(" %");
     
     Serial.print("Etat du radiateur : ");
-    if (radiateur==1){
+    if (radiateur==0){
       Serial.println("Eteint");
     }
-    else if (radiateur==0){
+    else if (radiateur==1){
       Serial.println("Allume");
     }
     Serial.println("----------------------------");   

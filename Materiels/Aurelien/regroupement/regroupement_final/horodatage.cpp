@@ -10,7 +10,7 @@ carte Arduino utilisé. cf : https://www.arduino.cc/en/Reference/SPI */
 
 SdFat sd;                 //
 uint8_t buf[BUFFER_SIZE]; //Variable SD
-float pulsion = 0.0;  
+float pulsion = 0;  
 RTC_DS1307 rtc;           //Variable RTC 
 
 void initHorodatage(){
@@ -33,18 +33,18 @@ void initRTC(){
     rtc.isrunning();  
 }
 
-void horodatage(){
+void horodatage(float consomation){
 
       SdFile fichier; 
-      String dateHeure="0";
+
+      pulsion=pulsion+0.1;
       //ecriture dans le fichier txt Compteur_Elec dans la SD
-      if(!fichier.open(&sd, "Compteur_Energie.txt", O_RDWR|O_TRUNC|O_AT_END|O_SYNC)){
+      if(!fichier.open(&sd, "Compteur_bis_bis_bis.txt", O_RDWR|O_TRUNC|O_AT_END)){
         Serial.println("Erreur");
         return;
       }
-      pulsion=pulsion+0.1;      
-      fichier.print(pulsion);
-      fichier.print("KWh ");      
+      fichier.print(consomation);
+      fichier.print("KWh ");
       DateTime now = rtc.now();
       //affichage de la date 
       fichier.print(now.year());
@@ -63,19 +63,50 @@ void horodatage(){
     
       //sd.ls("/", LS_SIZE|LS_R);
     
-      //lecture du contenue du fichier txt Compteur_Elec dans la SD
-      if(!fichier.open(&sd, "Compteur_Energie.txt", O_READ)){
+      //lecture du contenue du fichier txt dans la SD
+      if(!fichier.open(&sd, "Compteur_bis_bis_bis.txt", O_READ)){
         Serial.println("erreur");
         return;
       }
       fichier.read(buf, sizeof(buf));
       String myString = String ((char *)buf);
       myString.trim();
-      Serial.print("\"");
-      Serial.print(myString);
-      Serial.println("\"");
-      fichier.close();
- 
-      
+      Serial.println(myString);
+      fichier.close();  
+}
+
+float consomation(){
+      pulsion=pulsion+0.1;
+      return pulsion;
+}
+
+int annee(){
+  DateTime now = rtc.now();
+  return now.year();  
+}
+
+int mois(){
+  DateTime now = rtc.now();
+  return now.month();
+}
+
+int jour(){
+  DateTime now = rtc.now();
+  return now.day();
+}
+
+int heure(){
+  DateTime now = rtc.now();
+  return now.hour();
+}
+  
+int minutes(){
+  DateTime now = rtc.now();
+  return now.minute();
+}
+
+int seconde(){
+  DateTime now = rtc.now();
+  return now.second();
 }
 

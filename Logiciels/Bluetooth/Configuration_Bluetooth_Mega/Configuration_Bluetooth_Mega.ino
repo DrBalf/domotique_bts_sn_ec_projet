@@ -33,8 +33,6 @@ void loop()
   // Read from Arduino Serial Monitor and send to HC-05
   if (Serial.available())
   {
-    Serial1
-    
-    .write(Serial.read());
+    Serial1.write(Serial.read());
   }
 }
