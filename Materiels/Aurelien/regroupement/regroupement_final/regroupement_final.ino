@@ -26,24 +26,43 @@ void setup(){
 
 void loop(){
   static int tempo=0;
+  
   if (tempo==500 || tempo==1000){
     maison.temperature=temperature();
     maison.humidite=humidite();
-    maison.radiateur=etatRelai();
-    affichage(maison.temperature, maison.humidite, maison.radiateur);   
+    maison.etatRadiateur=etatRelai();
+    affichage(maison.temperature, maison.humidite, maison.etatRadiateur);
   }
   if (tempo==1000){
     maison.qualiteAir=qualiteAir();
     affichage(maison.qualiteAir);
     tempo=0; 
   }
+  
   while(Serial2.available() > 0) {  
-    int c = Serial2.read();
-    if (c>=10 && c<=30){  
-      Serial.println(c);
+    double c = Serial2.read();
+    if (c==8){
+      maison.radiateurMode=true; 
     }
+    if (c==9){
+      maison.radiateurMode=false;
+    }
+    if (c>=10 && c<=30){   
+      maison.temperatureUtilisateur = c;
+    }
+    if (c==6){
+      if (maison.radiateur==true){
+        maison.radiateur=false;   
+      }
+    }
+    if (c==7){
+      if (maison.radiateur==false){
+        maison.radiateur=true;   
+      }
+    -}
   }
-  relai();
+  
+  relai(maison.radiateurMode, maison.temperature, maison.temperatureUtilisateur, maison.radiateur);
 
   if (flagCompteurEnergie==1){
         maison.consomation=consomation();

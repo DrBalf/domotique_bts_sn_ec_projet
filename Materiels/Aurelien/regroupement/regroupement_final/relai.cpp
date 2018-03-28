@@ -5,21 +5,24 @@ char valeur;
 
 void initrelai(){
   pinMode(pin_relai, OUTPUT);
-  digitalWrite(pin_relai,LOW);
-  Serial.println("entre 0 pour allumer le radiateur");
-  Serial.println("entre 1 pour eteindre le radiateur\n");
 }
 
-void relai(){
-    while(Serial2.available() > 0) {  
-    valeur = Serial2.read();
-    Serial.println(valeur);
-  }  
-  if (valeur==6){
-    digitalWrite(pin_relai,LOW); 
+void relai(bool mode, double temperature, double temperatureUtilisateur, bool valeur){
+  if (mode==false){  
+      if (valeur==true){
+        digitalWrite(pin_relai,HIGH); 
+      }
+      if (valeur==false){
+        digitalWrite(pin_relai,LOW);
+      }
   }
-  if (valeur==7){
-    digitalWrite(pin_relai,HIGH);
+  if (mode==true){
+    if(temperature<=temperatureUtilisateur-1){
+      digitalWrite(pin_relai,HIGH);
+    }
+    if(temperature>=temperatureUtilisateur){
+      digitalWrite(pin_relai,LOW);   
+    }
   }
 }
 

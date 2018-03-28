@@ -1,8 +1,8 @@
 #include "Arduino.h"
 #include "capteurSecurite.h"
 
-#define CAPTEUR_INCENDIE 2
-#define CAPTEUR_MOUVEMENT 3
+#define CAPTEUR_INCENDIE 35
+#define CAPTEUR_MOUVEMENT 36
 
 void initCapteur(void){
   pinMode(CAPTEUR_INCENDIE, INPUT);

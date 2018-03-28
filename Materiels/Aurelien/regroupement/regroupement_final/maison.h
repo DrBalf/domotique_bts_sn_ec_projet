@@ -5,18 +5,19 @@ class Maison
 {
 public:
     bool lumiere=false;
-    bool radiateur; //lore
     bool volet1=false;
     bool volet2=false;
     bool incendie=false;
     bool mouvement=false;
     float luminosite;
-    short temperatureUtilisateur;
-    double temperatureChauffDefault=20;
+    double temperatureUtilisateur=21;//lore
+    bool etatRadiateur; //lore
+    bool radiateur=false; //lore
     double temperature; //lore
     char qualiteAir; //lore
     double humidite; //lore
     float consomation; //lore
+    bool radiateurMode=false;//lore false=0=mode manuel|true=1=mode automatique
     //lore
     int annee;
     int jour;    
@@ -24,7 +25,7 @@ public:
     int heure;    
     int minutes;    
     int seconde;
-    
+    //
 private:
      
 };

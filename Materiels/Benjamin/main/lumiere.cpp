@@ -1,7 +1,7 @@
 #include "Arduino.h"
 #include "lumiere.h"
 
-int ledPin = 8;
+int ledPin = 33;
 
 void initLumiere(void){
   pinMode(ledPin, OUTPUT);

@@ -3,7 +3,7 @@
 
 void initrelai(void);
 
-void relai ();
+void relai (bool, double, double, bool);
 
 bool etatRelai (void);
 
