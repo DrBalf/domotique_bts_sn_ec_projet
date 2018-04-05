@@ -3,6 +3,8 @@
 #include "horodatage.h"
 #include "affichage.h"
 #include "maison.h"
+#include <avr/io.h>
+#include <avr/interrupt.h>
 
 Maison maison;
 
@@ -10,7 +12,17 @@ unsigned short interruptePinCompteur = 3; //Variable Compteur
 
 unsigned short flagCompteurEnergie=0;
 
+unsigned short flagCompteurTimer=0;
+
+volatile unsigned int cpt=0;
+
 void setup(){
+
+  //config timer2
+  TCCR2A=0x00;
+  TCCR2B|=(1<<CS22)|(1<<CS21)|(1<<CS20);
+  TIMSK2|=(1<<TOIE2);
+  sei();
   
   Serial.begin(9600);
   Serial2.begin(9600);
@@ -25,20 +37,25 @@ void setup(){
 }
 
 void loop(){
-  static int tempo=0;
-  
-  if (tempo==500 || tempo==1000){
-    maison.temperature=temperature();
-    maison.humidite=humidite();
-    maison.etatRadiateur=etatRelai();
-    affichage(maison.temperature, maison.humidite, maison.etatRadiateur);
-  }
-  if (tempo==1000){
-    maison.qualiteAir=qualiteAir();
-    affichage(maison.qualiteAir);
-    tempo=0; 
-  }
-  
+
+    if (flagCompteurTimer==1){
+        maison.temperature=temperature();
+        maison.humidite=humidite();
+        maison.etatRadiateur=etatRelai();
+        affichage(maison.temperature, maison.humidite, maison.etatRadiateur);
+        flagCompteurTimer=0;
+    }
+    if (flagCompteurTimer==2){
+        maison.qualiteAir=qualiteAir();
+        maison.temperature=temperature();
+        maison.humidite=humidite();
+        maison.etatRadiateur=etatRelai();
+        affichage(maison.temperature, maison.humidite, maison.etatRadiateur);
+        affichage(maison.qualiteAir);
+        flagCompteurTimer=0;
+        cpt=0;    
+    }
+    
   while(Serial2.available() > 0) {  
     double c = Serial2.read();
     if (c==8){
@@ -59,7 +76,7 @@ void loop(){
       if (maison.radiateur==false){
         maison.radiateur=true;   
       }
-    -}
+    }
   }
   
   relai(maison.radiateurMode, maison.temperature, maison.temperatureUtilisateur, maison.radiateur);
@@ -75,8 +92,6 @@ void loop(){
         horodatage(maison.consomation);             
         flagCompteurEnergie=0;
   }
-  tempo++;
-  delay(10);
 }
 
 
@@ -89,4 +104,13 @@ void interruptionCompteur(){
   }
 }
 
+ISR(TIMER2_OVF_vect){
+   cpt++;
+   if (cpt==305){
+      flagCompteurTimer=1;
+   }
+   if (cpt==610){
+      flagCompteurTimer=2;
+   }
+}
 
