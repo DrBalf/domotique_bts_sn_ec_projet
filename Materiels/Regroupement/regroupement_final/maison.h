@@ -12,7 +12,7 @@ public:
     double temperatureUtilisateur=21;//lore
     bool radiateur=false; //lore
     double temperature; //lore
-    char qualiteAir; //lore
+    int qualiteAir; //lore
     double humidite; //lore
     float consomation; //lore
     

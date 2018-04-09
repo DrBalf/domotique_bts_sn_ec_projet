@@ -53,56 +53,38 @@ void loop(){
         affichage(maison.temperature, maison.humidite, maison.etatRadiateur);
 
         //tablette
-        if (maison.lumiere==0){
-          trame+="!";
-          trame+="eteint"; 
-        }
-        if (maison.lumiere==1){
-          trame+="!";
-          trame+="allumer"; 
-        }
+       
+        trame += maison.lumiere;      
         trame += "!";
         trame += maison.luminosite;
-        if (maison.volet1Etat==0){
-          trame+="!";
-          trame+="fermer"; 
-        }
-        if (maison.volet1Etat==1){
-          trame+="!";
-          trame+="ouvert"; 
-        }
-        if (maison.volet2Etat==0){
-          trame+="!";
-          trame+="fermer"; 
-        }
-        if (maison.volet2Etat==1){
-          trame+="!";
-          trame+="ouvert"; 
-        }
-        if (maison.etatRadiateur==0){
-          trame+="!";
-          trame+="eteint"; 
-        }
-        if (maison.etatRadiateur==1){
-          trame+="!";
-          trame+="allumer"; 
-        }
+        trame += "!";
+        trame += maison.volet1Etat; 
+        trame += "!";
+        trame += maison.volet2Etat;
+        trame += "!";
+        trame += maison.etatRadiateur; 
         trame += "!";
         trame += maison.temperature;
         trame += "!";
         trame += maison.consomation;
         trame += "!";
-        trame += maison.qualiteAir;
-        trame += "!";
         trame += maison.humidite;
         trame += "!";
-        trame += maison
+        trame += maison.qualiteAir; 
+        //relevé date
+        trame += "!";
+        trame += maison.jour;
+        trame += "!";
+        trame += maison.mois;
+        trame += "!";
+        trame += maison.annee;
+        trame += "!";
+        trame += maison.heure;
+        trame += "!";
+        trame += maison.minutes;
+        trame += "!";
         Serial.println(trame);
         Serial2.println(trame);
-        /*Serial2.print("$tem");
-        Serial2.print(maison.temperature);
-        Serial2.print("$hum");
-        Serial2.print(maison.humidite);*/
         trame = "";
         flagCompteurTimer=0;
     }
