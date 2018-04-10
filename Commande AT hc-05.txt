@@ -1,0 +1,1 @@
+http://www.linotux.ch/arduino/HC-0305_serial_module_AT_commamd_set_201104_revised.pdf

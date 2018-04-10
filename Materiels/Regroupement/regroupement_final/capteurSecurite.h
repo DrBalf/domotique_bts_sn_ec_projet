@@ -4,7 +4,7 @@
 void initCapteurSecu(void);
 bool incendie(void);
 bool mouvement(void);
-void sms(void);
+void sms(bool, bool);
 int8_t sendATcommand(char*, char*, unsigned int);
 
 #endif 

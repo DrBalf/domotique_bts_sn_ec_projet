@@ -7,8 +7,20 @@ char daysOfTheWeek[7][12] = {"Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", 
 
 void setup() {
   Serial.begin(9600);
-  rtc.begin();
-  rtc.isrunning();  
+  if (! rtc.begin()) {
+    Serial.println("Couldn't find RTC");
+    while (1);
+  }
+
+  if (! rtc.isrunning()) {
+    Serial.println("RTC is NOT running!");
+    // following line sets the RTC to the date & time this sketch was compiled
+    // rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+    // This line sets the RTC with an explicit date & time, for example to set
+    // January 21, 2014 at 3am you would call:
+    rtc.adjust(DateTime(2018, 02, 1, 11, 43, 0));
+  }
+  rtc.adjust(DateTime(2018, 02, 07, 17, 39, 0));
 }
 
 void loop() {

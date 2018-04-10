@@ -9,7 +9,6 @@ char aux_string[30];
 char phone_number[]="+33648977501";
 
 void initCapteurSecu(void){
-  Serial1.begin(9600);
   pinMode(CAPTEUR_INCENDIE, INPUT);
   pinMode(CAPTEUR_MOUVEMENT, INPUT);
 }
@@ -35,22 +34,23 @@ bool mouvement(void){
 }
 
 
-void sms(void){
+void sms(bool incendie, bool mouvement){
 
     //while( (sendATcommand("AT+CREG?", "+CREG: 0,1", 500) || sendATcommand("AT+CREG?", "+CREG: 0,5", 500)) == 0 );
     // Activation du mode texte pour les SMS.  
     sendATcommand("AT+CMGF=1", "OK", 1000);
      
     sprintf(aux_string,"AT+CMGS=\"%s\"", phone_number);
-    // Envoi du numéro de téléphone au module GSM.
+    // Envoi du numéro de téléphone au module GSM. 
     sendATcommand(aux_string, ">", 2000);        
 
     
-    if(mouvement()==true){
+    if(mouvement==true){
+      Serial.println("un mouvement est detecte !");
       Serial1.println("un mouvement est detecte !");
       Serial1.write(0x1A);
     }
-    if(incendie()==true){
+    if(incendie==true){
       Serial1.println("un incendie est detecte !");
       Serial1.write(0x1A);
     }

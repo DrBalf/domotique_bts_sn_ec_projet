@@ -1,6 +1,6 @@
 int8_t answer;
 char aux_string[30];
-char phone_number[]="+33648977501";
+char phone_number[]="+33695168550";
 void setup()
 {
     Serial1.begin(9600);    

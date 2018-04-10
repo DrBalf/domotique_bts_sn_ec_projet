@@ -8,6 +8,8 @@ public:
     bool volet1=false;
     bool volet2=false;
     float luminosite;
+    bool incendie;
+    bool mouvement;
     
     double temperatureUtilisateur=21;//lore
     bool radiateur=false; //lore

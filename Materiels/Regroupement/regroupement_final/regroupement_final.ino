@@ -1,7 +1,6 @@
 #include "capteur.h"
 #include "controleRadiateur.h"
 #include "horodatage.h"
-#include "affichage.h"
 #include "maison.h"
 #include "capteurSecurite.h"
 #include "lumiere.h"
@@ -10,6 +9,10 @@
 #include <avr/interrupt.h>
 
 Maison maison;
+
+void envoieTrame (void);
+
+void lectureTablette (void);
 
 unsigned short interruptePinCompteur = 3; //Variable Compteur
 
@@ -29,6 +32,7 @@ void setup(){
   sei();
   
   Serial.begin(9600);
+  Serial1.begin(9600);
   Serial2.begin(9600);
   Serial3.begin(9600);
 
@@ -45,48 +49,17 @@ void setup(){
 }
 
 void loop(){
-    int i=0;
+  
     if (flagCompteurTimer==1){
+        sms(maison.incendie, maison.mouvement);
         maison.temperature=temperature();
         maison.humidite=humidite();
         maison.etatRadiateur=etatRelai();
-        affichage(maison.temperature, maison.humidite, maison.etatRadiateur);
-
-        //tablette
-       
-        trame += maison.lumiere;      
-        trame += "!";
-        trame += maison.luminosite;
-        trame += "!";
-        trame += maison.volet1Etat; 
-        trame += "!";
-        trame += maison.volet2Etat;
-        trame += "!";
-        trame += maison.etatRadiateur; 
-        trame += "!";
-        trame += maison.temperature;
-        trame += "!";
-        trame += maison.consomation;
-        trame += "!";
-        trame += maison.humidite;
-        trame += "!";
-        trame += maison.qualiteAir; 
-        //relevé date
-        trame += "!";
-        trame += maison.jour;
-        trame += "!";
-        trame += maison.mois;
-        trame += "!";
-        trame += maison.annee;
-        trame += "!";
-        trame += maison.heure;
-        trame += "!";
-        trame += maison.minutes;
-        trame += "!";
-        Serial.println(trame);
-        Serial2.println(trame);
-        trame = "";
+        envoieTrame(); 
+        maison.incendie=false;
+        maison.mouvement=false;       
         flagCompteurTimer=0;
+        
     }
     if (flagCompteurTimer==2){
         maison.qualiteAir=qualiteAir();
@@ -94,13 +67,39 @@ void loop(){
         maison.humidite=humidite();
         maison.etatRadiateur=etatRelai();
         maison.luminosite=luminosite();
-        affichage(maison.temperature, maison.humidite, maison.etatRadiateur);
-        affichage(maison.qualiteAir);
+        envoieTrame();
+        maison.incendie=false;
+        maison.mouvement=false;  
         flagCompteurTimer=0;
         cpt=0;    
     }
     
-  while(Serial2.available() > 0) {  
+  lectureTablette();
+  
+  maison.incendie=incendie();
+  maison.mouvement=mouvement();
+  
+  relai(maison.radiateurMode, maison.temperature, maison.temperatureUtilisateur, maison.radiateur);  
+  maison.volet1=volet1(maison.volet1Etat, maison.voletMode);
+  maison.volet2=volet2(maison.volet2Etat, maison.voletMode);
+  maison.lumiere=lumiere(maison.lumiereEtat);  
+
+  if (flagCompteurEnergie==1){
+        maison.consomation=consomation();
+        maison.annee=annee();
+        maison.mois=mois();
+        maison.jour=jour();
+        maison.heure=heure();
+        maison.minutes=minutes();
+        maison.seconde=seconde();
+        horodatage(maison.consomation);             
+        flagCompteurEnergie=0;
+  }
+}
+
+void lectureTablette (){
+  
+    while(Serial2.available() > 0) {  
     double c = Serial2.read();
     if (c==0){ //lumiere eteinte
       if (maison.lumiere==true){
@@ -158,27 +157,44 @@ void loop(){
       maison.voletMode=false;
     }
   }
-  
-  relai(maison.radiateurMode, maison.temperature, maison.temperatureUtilisateur, maison.radiateur);
-  //sms();
-  maison.volet1=volet1(maison.volet1Etat, maison.voletMode);
-  maison.volet2=volet2(maison.volet2Etat, maison.voletMode);
-  maison.lumiere=lumiere(maison.lumiereEtat);
-  
-
-  if (flagCompteurEnergie==1){
-        maison.consomation=consomation();
-        maison.annee=annee();
-        maison.mois=mois();
-        maison.jour=jour();
-        maison.heure=heure();
-        maison.minutes=minutes();
-        maison.seconde=seconde();
-        horodatage(maison.consomation);             
-        flagCompteurEnergie=0;
-  }
 }
 
+void envoieTrame (){
+    //tablette       
+    trame += maison.lumiere;      
+    trame += "!";
+    trame += maison.luminosite;
+    trame += "!";
+    trame += maison.volet1Etat; 
+    trame += "!";
+    trame += maison.volet2Etat;
+    trame += "!";
+    trame += maison.etatRadiateur; 
+    trame += "!";
+    trame += maison.temperature;
+    trame += "!";
+    trame += maison.consomation;
+    trame += "!";
+    trame += maison.humidite;
+    trame += "!";
+    trame += maison.qualiteAir; 
+    //relevé date
+    trame += "!";
+    trame += maison.jour;
+    trame += "!";
+    trame += maison.mois;
+    trame += "!";
+    trame += maison.annee;
+    trame += "!";
+    trame += maison.heure;
+    trame += "!";
+    trame += maison.minutes;
+    trame += "!";
+    Serial.println(trame);
+    Serial2.println(trame);
+    Serial3.println(trame);
+    trame = "";
+}
 
 void interruptionCompteur(){
 
