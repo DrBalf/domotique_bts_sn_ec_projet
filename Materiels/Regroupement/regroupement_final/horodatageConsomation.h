@@ -1,7 +1,7 @@
-#ifndef HORODATAGE_H
-#define HORODATAGE_H
+#ifndef HORODATAGECONSOMATION_H
+#define HORODATAGECONSOMATION_H
 
-void initHorodatage(void);
+void initHorodatageConsomation(void);
 
 void horodatage(float);
 

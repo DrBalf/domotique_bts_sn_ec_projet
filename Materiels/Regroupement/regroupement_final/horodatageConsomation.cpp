@@ -1,7 +1,7 @@
 #include <SPI.h>          //
 #include <SdFat.h>        //Bibliothèque carte SD   
 #include <RTClib.h>       //Bibliothèque RTC
-#include "horodatage.h"
+#include "horodatageConsomation.h"
 #include "maison.h" 
 /*Le module SD focntion en liason SPI et les pin SPI sont différente en fonction de la carte
 carte Arduino utilisé. cf : https://www.arduino.cc/en/Reference/SPI */ 
@@ -13,25 +13,19 @@ uint8_t buf[BUFFER_SIZE]; //Variable SD
 float pulsion = 0;  
 RTC_DS1307 rtc;           //Variable RTC 
 
-void initHorodatage(){
-
-    initSD();
-    initRTC();
-}
-
-void initSD(){
-    //Setup SD
+void initHorodatageConsomation(){
+   //Setup SD
     Serial.println("init SD");
     if(!sd.begin()){
       Serial.println("erreur init");
       return;
-    } 
+    }
+
+    rtc.begin();
+    rtc.isrunning(); 
 }
 
-void initRTC(){
-    rtc.begin();
-    rtc.isrunning();  
-}
+/****************Fonction qui horodate la consomation d'énergie et sauvegarde le tout sur une carte SD**********************/
 
 void horodatage(float consomation){
 
@@ -75,10 +69,14 @@ void horodatage(float consomation){
       fichier.close();  
 }
 
+/*********************Fonction de comptage de la consomation************************/
+
 float consomation(){
       pulsion=pulsion+0.1;
       return pulsion;
 }
+
+/**********************************Fonctions de récupération de la date et de l'heure*********************************/
 
 int annee(){
   DateTime now = rtc.now();

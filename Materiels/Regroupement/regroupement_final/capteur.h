@@ -1,14 +1,22 @@
 #ifndef CAPTEUR_H
 #define CAPTEUR_H
 
-double temperature (void);
-
-double humidite (void);
-
 void initCapteur (void);
 
-int qualiteAir (void);
+double capteurTemperature (void);
 
-float luminosite(void);
+double capteurHumidite (void);
+
+int capteurQualiteAir (void);
+
+float capteurLuminosite(void);
+
+bool capteurIncendie(void);
+
+bool capteurMouvement(void);
+
+void envoieSMS(bool, bool);
+
+int sendATcommand (char*, char*, unsigned int);
 
 #endif 

@@ -1,6 +1,5 @@
 #ifndef __MAISON_H__
 #define __MAISON_H__
-#include"Arduino.h"
 class Maison
 {
 public:
@@ -34,7 +33,16 @@ public:
     int minutes;    
     int seconde;
     //
+
+    void emissionTrame (void);
+
+    void lectureTablette (void);
+    
 private:
+
      
 };
+
+void initSerial (void);
+
 #endif

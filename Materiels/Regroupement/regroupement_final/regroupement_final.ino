@@ -1,18 +1,13 @@
 #include "capteur.h"
-#include "controleRadiateur.h"
-#include "horodatage.h"
-#include "maison.h"
-#include "capteurSecurite.h"
-#include "lumiere.h"
-#include "mouvementVolet.h"
+#include "controleActionneur.h"
+#include "horodatageConsomation.h"
+#include "gestionMaison.h"
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
 Maison maison;
 
-void envoieTrame (void);
-
-void lectureTablette (void);
+void initTimer2 (void);
 
 unsigned short interruptePinCompteur = 3; //Variable Compteur
 
@@ -20,69 +15,61 @@ unsigned short flagCompteurEnergie=0;
 
 unsigned short flagCompteurTimer=0;
 
-String trame;
-
 volatile unsigned int cpt=0;
 
 void setup(){
-  //config timer2
-  TCCR2A=0x00;
-  TCCR2B|=(1<<CS22)|(1<<CS21)|(1<<CS20);
-  TIMSK2|=(1<<TOIE2);
-  sei();
   
-  Serial.begin(9600);
-  Serial1.begin(9600);
-  Serial2.begin(9600);
-  Serial3.begin(9600);
-
-  initVolet();
-  initLumiere();
-  initCapteurSecu();
-  initRelai();
-  initHorodatage();
+  initSerial();
+  initTimer2();
+  initActionneur();
+  initHorodatageConsomation();
   initCapteur();
-
   //Setup Compteur interruption
   pinMode(interruptePinCompteur, INPUT_PULLUP);                             
   attachInterrupt(digitalPinToInterrupt(interruptePinCompteur), interruptionCompteur, LOW);
 }
 
 void loop(){
-  
+
+/*******************Le drapeau 1 du Timer1 se "lève" toute les 5 sec**************************/
     if (flagCompteurTimer==1){
-        sms(maison.incendie, maison.mouvement);
-        maison.temperature=temperature();
-        maison.humidite=humidite();
-        maison.etatRadiateur=etatRelai();
-        envoieTrame(); 
-        maison.incendie=false;
-        maison.mouvement=false;       
-        flagCompteurTimer=0;
-        
+        maison.temperature=capteurTemperature(); //récupération de la température dans un attribue
+        maison.humidite=capteurHumidite();
+        maison.etatRadiateur=etatThermostat();        
+        maison.emissionTrame(); //emission de la trame pour le serveur WEB et la tablette              
+        flagCompteurTimer=0;  //rermise du drapeau 1 a 0 "on baisse le drapeau".      
     }
+
+/*******************Le drapeau 2 du Timer1 se "lève" toute les 10 sec**************************/    
     if (flagCompteurTimer==2){
-        maison.qualiteAir=qualiteAir();
-        maison.temperature=temperature();
-        maison.humidite=humidite();
-        maison.etatRadiateur=etatRelai();
-        maison.luminosite=luminosite();
-        envoieTrame();
-        maison.incendie=false;
-        maison.mouvement=false;  
-        flagCompteurTimer=0;
-        cpt=0;    
+        envoieSMS(maison.incendie, maison.mouvement); //émission du sms d'alerte si alerte
+        maison.qualiteAir=capteurQualiteAir();
+        maison.temperature=capteurTemperature();
+        maison.humidite=capteurHumidite();
+        maison.etatRadiateur=etatThermostat();
+        maison.luminosite=capteurLuminosite();
+        maison.incendie = false; //on remet les valeurs des attribue d'alerte a l'état passif
+        maison.mouvement = false;        
+        maison.emissionTrame();//emission de la trame pour le serveur WEB et la tablette         
+        flagCompteurTimer=0;  //rermise du drapeau 2 a 0 "on baisse le drapeau".  
     }
+
     
-  lectureTablette();
+  maison.lectureTablette();
+
+
+  if (maison.incendie == false){
+  maison.incendie=capteurIncendie();
+  }
   
-  maison.incendie=incendie();
-  maison.mouvement=mouvement();
+  if (maison.mouvement == false){
+  maison.mouvement=capteurMouvement();
+  }
   
-  relai(maison.radiateurMode, maison.temperature, maison.temperatureUtilisateur, maison.radiateur);  
-  maison.volet1=volet1(maison.volet1Etat, maison.voletMode);
-  maison.volet2=volet2(maison.volet2Etat, maison.voletMode);
-  maison.lumiere=lumiere(maison.lumiereEtat);  
+  controleThermostat(maison.radiateurMode, maison.temperature, maison.temperatureUtilisateur, maison.radiateur);  
+  maison.volet1=controleVolet1(maison.volet1Etat, maison.voletMode);
+  maison.volet2=controleVolet2(maison.volet2Etat, maison.voletMode);
+  maison.lumiere=controleLumiere(maison.lumiereEtat);  
 
   if (flagCompteurEnergie==1){
         maison.consomation=consomation();
@@ -97,105 +84,6 @@ void loop(){
   }
 }
 
-void lectureTablette (){
-  
-    while(Serial2.available() > 0) {  
-    double c = Serial2.read();
-    if (c==0){ //lumiere eteinte
-      if (maison.lumiere==true){
-        maison.lumiereEtat=false;
-      } 
-    }
-    if (c==1){ //lumiere allumer
-      if (maison.lumiere==false){
-        maison.lumiereEtat=true;
-      } 
-    }
-    if (c==2){ //volet1 fermer
-      if (maison.volet1Etat==true){
-        maison.volet1Etat=false; 
-      }
-    }
-    if (c==3){ //volet1 ouvrir
-      if (maison.volet1Etat==false){
-        maison.volet1Etat=true; 
-      }
-    }
-    if (c==4){ //volet2 fermer
-      if (maison.volet2Etat==true){
-        maison.volet2Etat=false; 
-      } 
-    }
-    if (c==5){ //volet2 ouvrir
-      if (maison.volet2Etat==false){
-        maison.volet2Etat=true; 
-      } 
-    }
-    if (c==6){ //chauffage etteind
-      if (maison.radiateur==true){
-        maison.radiateur=false;   
-      }
-    }
-    if (c==7){ //chauffage allumer
-      if (maison.radiateur==false){
-        maison.radiateur=true;   
-      }
-    }
-    if (c==8){ //chauffage manuel
-      maison.radiateurMode=true; 
-    }
-    if (c==9){ //chauffage auto
-      maison.radiateurMode=false;
-    }
-    if (c>=10 && c<=30){   
-      maison.temperatureUtilisateur = c;
-    }
-    if (c==31){ //volet manuel
-      maison.voletMode=true; 
-    }
-    if (c==32){ //volet auto
-      maison.voletMode=false;
-    }
-  }
-}
-
-void envoieTrame (){
-    //tablette       
-    trame += maison.lumiere;      
-    trame += "!";
-    trame += maison.luminosite;
-    trame += "!";
-    trame += maison.volet1Etat; 
-    trame += "!";
-    trame += maison.volet2Etat;
-    trame += "!";
-    trame += maison.etatRadiateur; 
-    trame += "!";
-    trame += maison.temperature;
-    trame += "!";
-    trame += maison.consomation;
-    trame += "!";
-    trame += maison.humidite;
-    trame += "!";
-    trame += maison.qualiteAir; 
-    //relevé date
-    trame += "!";
-    trame += maison.jour;
-    trame += "!";
-    trame += maison.mois;
-    trame += "!";
-    trame += maison.annee;
-    trame += "!";
-    trame += maison.heure;
-    trame += "!";
-    trame += maison.minutes;
-    trame += "!";
-    Serial.println(trame);
-    Serial2.println(trame);
-    Serial3.println(trame);
-    trame = "";
-}
-
 void interruptionCompteur(){
 
   delay(50);
@@ -205,6 +93,14 @@ void interruptionCompteur(){
   }
 }
 
+void initTimer2 (){
+  //config timer2
+  TCCR2A=0x00;
+  TCCR2B|=(1<<CS22)|(1<<CS21)|(1<<CS20);
+  TIMSK2|=(1<<TOIE2);
+  sei();
+}
+
 ISR(TIMER2_OVF_vect){
    cpt++;
    if (cpt==305){
@@ -212,6 +108,7 @@ ISR(TIMER2_OVF_vect){
    }
    if (cpt==610){
       flagCompteurTimer=2;
+      cpt=0;
    }
 }
 
