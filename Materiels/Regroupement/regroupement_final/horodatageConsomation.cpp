@@ -2,7 +2,7 @@
 #include <SdFat.h>        //Bibliothèque carte SD   
 #include <RTClib.h>       //Bibliothèque RTC
 #include "horodatageConsomation.h"
-#include "maison.h" 
+#include "gestionMaison.h" 
 /*Le module SD focntion en liason SPI et les pin SPI sont différente en fonction de la carte
 carte Arduino utilisé. cf : https://www.arduino.cc/en/Reference/SPI */ 
 #define BUFFER_SIZE 250   //déffinition de la taille du buffer.

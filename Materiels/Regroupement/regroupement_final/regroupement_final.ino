@@ -71,6 +71,8 @@ void loop(){
   maison.volet2=controleVolet2(maison.volet2Etat, maison.voletMode);
   maison.lumiere=controleLumiere(maison.lumiereEtat);  
 
+/*******************Le drapeau 1 de l'interruption compteur**************************/
+
   if (flagCompteurEnergie==1){
         maison.consomation=consomation();
         maison.annee=annee();
