@@ -33,7 +33,7 @@ void horodatage(float consomation){
 
       pulsion=pulsion+0.1;
       //ecriture dans le fichier txt Compteur_Elec dans la SD
-      if(!fichier.open(&sd, "Compteur_bis_bis_bis.txt", O_RDWR|O_CREAT|O_AT_END)){
+      if(!fichier.open(&sd, "Compteur_bis_bis_bis.txt", O_RDWR|O_TRUNC|O_AT_END)){
         Serial.println("Erreur");
         return;
       }

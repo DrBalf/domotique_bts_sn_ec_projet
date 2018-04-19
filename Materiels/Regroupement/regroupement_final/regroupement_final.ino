@@ -11,11 +11,17 @@ void initTimer2 (void);
 
 unsigned short interruptePinCompteur = 3; //Variable Compteur
 
-unsigned short flagCompteurEnergie=0;
+unsigned short flagCompteurEnergie=1;
 
 unsigned short flagCompteurTimer=0;
 
 volatile unsigned int cpt=0;
+
+unsigned short interruptBouton=2;
+
+bool boutonEtteint=true;
+
+bool boutonAllumer=false; 
 
 void setup(){
   
@@ -27,6 +33,9 @@ void setup(){
   //Setup Compteur interruption
   pinMode(interruptePinCompteur, INPUT_PULLUP);                             
   attachInterrupt(digitalPinToInterrupt(interruptePinCompteur), interruptionCompteur, LOW);
+  //setup bouton alarme interruption
+  pinMode(interruptBouton, INPUT);
+  attachInterrupt(digitalPinToInterrupt(interruptBouton), interruptionBouton, RISING); 
 }
 
 void loop(){
@@ -59,13 +68,14 @@ void loop(){
 
 
   if (maison.incendie == false){
-  maison.incendie=capteurIncendie();
+      maison.incendie=capteurIncendie();
   }
-  
-  if (maison.mouvement == false){
-  maison.mouvement=capteurMouvement();
+
+  if (maison.alarme==true){
+      if (maison.mouvement == false){
+      maison.mouvement=capteurMouvement();
+      }
   }
-  
   controleThermostat(maison.radiateurMode, maison.temperature, maison.temperatureUtilisateur, maison.radiateur);  
   maison.volet1=controleVolet1(maison.volet1Etat, maison.voletMode);
   maison.volet2=controleVolet2(maison.volet2Etat, maison.voletMode);
@@ -83,6 +93,21 @@ void loop(){
         maison.seconde=seconde();
         horodatage(maison.consomation);             
         flagCompteurEnergie=0;
+  }
+}
+
+void interruptionBouton(){
+  if (boutonEtteint==true){
+    boutonEtteint=false;
+    boutonAllumer=true;
+    maison.alarme=true;
+    Serial.println("allumer");
+  }
+  else{
+    boutonEtteint=true;
+    boutonAllumer=false;
+    maison.alarme=false;
+    Serial.println("etteint");
   }
 }
 

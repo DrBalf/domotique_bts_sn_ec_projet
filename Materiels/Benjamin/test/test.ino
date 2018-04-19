@@ -1,14 +1,29 @@
-#include <SoftwareSerial.h>
-SoftwareSerial SSerial(2,3);
+const int interruptButtonPin=3;
+bool buttonEtteint=true;
+bool buttonAllumer=false;
+
 void setup()
 {
-  SSerial.begin(9600);
-  SSerial.print("$lum0;$rad1;$vol1;$tem30;$hum25;$con5000;$air5;$heu10:25:30;\n");
-  delay(10);
+  Serial.begin(9600);
+  pinMode(interruptButtonPin, INPUT);
+  attachInterrupt(digitalPinToInterrupt(interruptButtonPin), interruptButton, RISING);
 }
 
  
 void loop()
 {
+}
+
+void interruptButton(){
+  if (buttonEtteint==true){
+    buttonEtteint=false;
+    buttonAllumer=true;
+    Serial.println("Allumer");
+  }
+  else{
+    buttonEtteint=true;
+    buttonAllumer=false;
+    Serial.println("Etteint");
+  }
 }
 

@@ -7,6 +7,7 @@ public:
     bool volet1=false;
     bool volet2=false;
     float luminosite;
+    bool alarme=false;
     bool incendie;
     bool mouvement;
     

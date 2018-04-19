@@ -12,7 +12,7 @@ int cmdDown2 = 29;
 int switchUp2 = 30;
 int switchDown2 = 31;
 
-int pinThermostat = 2;
+int pinThermostat = 4;
 int pinLumiere = 33;
 char valeurEtat;
 
@@ -89,14 +89,14 @@ bool controleVolet1(bool sens, bool mode){
     }
 
     if(mode==false){
-      if(capteurLuminosite()<25.00){
+      if(capteurLuminosite()>35.00){
           while(digitalRead(switchUp)==HIGH){
               digitalWrite(cmdUp,HIGH);
           }
           digitalWrite(cmdUp,LOW);
           positionVolet = true;
       }
-      if(capteurLuminosite()>25.00){
+      if(capteurLuminosite()<10.00){
           while(digitalRead(switchDown)==HIGH){
               digitalWrite(cmdDown,HIGH);
           }
@@ -130,14 +130,14 @@ bool controleVolet2(bool sens, bool mode){
     }
 
     if(mode==false){
-      if(capteurLuminosite()<25.00){
+      if(capteurLuminosite()>35.00){
           while(digitalRead(switchUp2)==HIGH){
               digitalWrite(cmdUp2,HIGH);
           }
           digitalWrite(cmdUp2,LOW);
           positionVolet = true;
       }
-      if(capteurLuminosite()>25.00){
+      if(capteurLuminosite()<10.00){
           while(digitalRead(switchDown2)==HIGH){
               digitalWrite(cmdDown2,HIGH);
           }
