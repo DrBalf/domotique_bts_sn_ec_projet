@@ -13,14 +13,14 @@ void loop()
   // Read from HC-05 and send it to Arduino Serial Monitor
 
 
-  if (Serial3.available() > 0)
+  if (Serial1.available() > 0)
   {
-    Serial.write(Serial3.read());
+    Serial.write(Serial1.read());
   }
  
   // Read from Arduino Serial Monitor and send to HC-05
   if (Serial.available())
   {
-    Serial3.write(Serial.read());
+    Serial1.write(Serial.read());
   }
 }
