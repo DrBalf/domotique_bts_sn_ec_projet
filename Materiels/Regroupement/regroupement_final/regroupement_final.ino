@@ -19,9 +19,9 @@ volatile unsigned int cpt=0;
 
 unsigned short interruptBouton=2;
 
-bool boutonEtteint=true;
+//bool boutonEtteint=true;
 
-bool boutonAllumer=false; 
+//bool boutonAllumer=false; 
 
 void setup(){
   
@@ -30,9 +30,11 @@ void setup(){
   initActionneur();
   initHorodatageConsomation();
   initCapteur();
-  //Setup Compteur interruption
+  
+  //Setup Compteur d'energie interruption
   pinMode(interruptePinCompteur, INPUT_PULLUP);                             
   attachInterrupt(digitalPinToInterrupt(interruptePinCompteur), interruptionCompteur, LOW);
+  
   //setup bouton alarme interruption
   pinMode(interruptBouton, INPUT);
   attachInterrupt(digitalPinToInterrupt(interruptBouton), interruptionBouton, RISING); 
@@ -64,8 +66,9 @@ void loop(){
     }
 
     
-  maison.lectureTablette();
+  maison.lectureTablette(); //on récupère les valeurs valeurs envoyer par la tablette 
 
+/**************************Partie sécurité************************************************/
 
   if (maison.incendie == false){
       maison.incendie=capteurIncendie();
@@ -76,6 +79,9 @@ void loop(){
       maison.mouvement=capteurMouvement();
       }
   }
+  
+ /******************Controle des actionneur en fonction des commande de l'utilisateur******************/ 
+ 
   controleThermostat(maison.radiateurMode, maison.temperature, maison.temperatureUtilisateur, maison.radiateur);  
   maison.volet1=controleVolet1(maison.volet1Etat, maison.voletMode);
   maison.volet2=controleVolet2(maison.volet2Etat, maison.voletMode);
@@ -95,9 +101,9 @@ void loop(){
         flagCompteurEnergie=0;
   }
 }
-
+/*******************************************/
 void interruptionBouton(){
-  if (boutonEtteint==true){
+  /*if (boutonEtteint==true){
     boutonEtteint=false;
     boutonAllumer=true;
     maison.alarme=true;
@@ -108,7 +114,16 @@ void interruptionBouton(){
     boutonAllumer=false;
     maison.alarme=false;
     Serial.println("etteint");
+  }*/
+   if (maison.alarme==true){
+    maison.alarme=false;
+    Serial.println("eteint");
   }
+  else{
+    maison.alarme=true;
+    Serial.println("allume");
+  }
+
 }
 
 void interruptionCompteur(){

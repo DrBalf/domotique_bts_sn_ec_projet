@@ -11,37 +11,33 @@ public:
     bool incendie;
     bool mouvement;
     
-    double temperatureUtilisateur=21;//lore
-    bool radiateur=false; //lore
-    double temperature; //lore
-    int qualiteAir; //lore
-    double humidite; //lore
-    float consomation; //lore
+    double temperatureUtilisateur=21;
+    bool radiateur=false; 
+    double temperature; 
+    int qualiteAir; 
+    double humidite; 
+    float consomation; 
     
-    bool etatRadiateur; //lore
+    bool etatRadiateur; 
     bool lumiereEtat=false; //_false=0=etteind|true=1=allumer
     bool volet1Etat=false; //_false=0=etteind|true=1=allumer
     bool volet2Etat=false; //_false=0=etteind|true=1=allumer
     
     bool voletMode=true; //_true=0=mode manuel|false=1=mode automatique
-    bool radiateurMode=false;//lore _false=0=mode manuel|true=1=mode automatique
+    bool radiateurMode=false;//_false=0=mode manuel|true=1=mode automatique
     
-    //lore
     int annee;
     int jour;    
     int mois;    
     int heure;    
     int minutes;    
     int seconde;
-    //
 
     void emissionTrame (void);
 
     void lectureTablette (void);
     
-private:
-
-     
+private:     
 };
 
 void initSerial (void);
