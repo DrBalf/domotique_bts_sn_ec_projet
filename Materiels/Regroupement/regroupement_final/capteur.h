@@ -15,7 +15,7 @@ bool capteurIncendie(void);
 
 bool capteurMouvement(void);
 
-void envoieSMS(bool, bool);
+unsigned int envoieSMS(bool, bool);
 
 int sendATcommand (char*, char*, unsigned int);
 

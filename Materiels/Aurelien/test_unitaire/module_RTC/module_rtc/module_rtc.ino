@@ -20,7 +20,7 @@ void setup() {
     // January 21, 2014 at 3am you would call:
     rtc.adjust(DateTime(2018, 02, 1, 11, 43, 0));
   }
-  rtc.adjust(DateTime(2019, 04, 19, 10, 48, 0));
+  rtc.adjust(DateTime(2018, 05, 31, 10, 47, 0));
 }
 
 void loop() {

@@ -21,7 +21,7 @@ char phone_number[]="+33648977501";
 
 void initCapteur(){
   Serial.println("initialisation des capteurs...");
-  rht.begin();
+  rht.begin();  
   pinMode(CAPTEUR_INCENDIE, INPUT);
   pinMode(CAPTEUR_MOUVEMENT, INPUT); 
   airqualitysensor.init(A0);
@@ -33,7 +33,7 @@ void initCapteur(){
 
 double capteurTemperature(){
   rht.readRHT();
-  return rht.temperature;  
+  return rht.temperature; 
 }
 
 double capteurHumidite(){
@@ -77,8 +77,8 @@ bool capteurMouvement(void){
 
 /***********************************************Fonction d'envoie du SMS d'alerte********************************************/
 
-void envoieSMS(bool incendie, bool mouvement){
-
+unsigned int envoieSMS(bool incendie, bool mouvement){
+    
     //while( (sendATcommand("AT+CREG?", "+CREG: 0,1", 500) || sendATcommand("AT+CREG?", "+CREG: 0,5", 500)) == 0 );
     // Activation du mode texte pour les SMS.  
     sendATcommand("AT+CMGF=1", "OK", 1000);
@@ -87,15 +87,21 @@ void envoieSMS(bool incendie, bool mouvement){
     // Envoi du numéro de téléphone au module GSM. 
     sendATcommand(aux_string, ">", 2000);        
 
-    
-    if(mouvement==true){
-      Serial.println("un mouvement est detecte !");
-      Serial1.println("un mouvement est detecte !");
-      Serial1.write(0x1A);
+    if (mouvement==true || incendie==true){
+      if(mouvement==true){
+        Serial.println("un mouvement est detecte !");
+        Serial1.println("un mouvement est detecte !");
+        Serial1.write(0x1A);
+              return 1;
+      }
+      if(incendie==true){
+        Serial1.println("un incendie est detecte !");
+        Serial1.write(0x1A);
+              return 1;
+      }
     }
-    if(incendie==true){
-      Serial1.println("un incendie est detecte !");
-      Serial1.write(0x1A);
+    else{
+      return 0;
     }
 }
 
